@@ -33,6 +33,12 @@
 
 ---
 
+<p align="center">
+  <img src="docs/image/wx_01.png" alt="微信交流1群" width="200px">
+  <br>
+  <em>🔌 微信交流群已开放，欢迎入群交流，互帮互助<br>另外碰到问题除了提issue外，也可以直接在群内反馈</em>
+</p>
+
 <a id="nav"></a>
 ## 📑 快速导航
 
