@@ -14,8 +14,9 @@ import glob
 import sys
 
 # ========== 配置 ==========
-TEMP_DIR = "/tmp"
-CONTROL_UI_DIR = "/tmp/control-ui-clean"
+import tempfile
+TEMP_DIR = tempfile.gettempdir()
+CONTROL_UI_DIR = os.path.join(TEMP_DIR, "control-ui-clean")
 ASSETS_DIR = os.path.join(CONTROL_UI_DIR, "assets")
 
 # 面板文件路径

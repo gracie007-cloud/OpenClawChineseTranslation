@@ -7,12 +7,7 @@
     "<span class=\"cfg-map__label\">Custom entries</span>": "<span class=\"cfg-map__label\">自定义条目</span>",
     ">\\n          Add Entry\\n        </button>": ">\\n          添加条目\\n        </button>",
     "<div class=\"cfg-map__empty\">No custom entries.</div>": "<div class=\"cfg-map__empty\">暂无自定义条目。</div>",
-    "class=\"cfg-array__count\">${count} item${count === 1": "class=\"cfg-array__count\">${count} 项${count === 1",
-    "\" : \"s\"}</span>": "\" : \"\"}</span>",
-    ">Remove</button>": ">删除</button>",
-    ">Save</button>": ">保存</button>",
-    ">Cancel</button>": ">取消</button>",
-    "\"Edit\"": "\"编辑\"",
-    "\"Delete\"": "\"删除\""
+    "class=\"cfg-array__count\">${arr.length} item${arr.length === 1": "class=\"cfg-array__count\">${arr.length} 项${arr.length === 1",
+    "\" : \"s\"}</span>": "\" : \"\"}</span>"
   }
 }

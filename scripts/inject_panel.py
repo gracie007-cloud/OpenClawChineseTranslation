@@ -21,15 +21,15 @@ PANEL_DIR = os.path.join(ROOT_DIR, 'translations', 'panel')
 
 # Dashboard 目录配置（按优先级排序，会尝试注入到所有存在的目录）
 DASHBOARD_DIRS = [
-    # 新版 A2UI（优先注入）
-    ('canvas-host/a2ui', [
-        os.path.join(ROOT_DIR, 'openclaw', 'dist', 'canvas-host', 'a2ui'),
-        'openclaw/dist/canvas-host/a2ui',
-    ]),
-    # 旧版 control-ui
+    # control-ui（Dashboard 主界面，优先注入）
     ('control-ui', [
         os.path.join(ROOT_DIR, 'openclaw', 'dist', 'control-ui'),
         'openclaw/dist/control-ui',
+    ]),
+    # canvas-host/a2ui（嵌入式 Canvas 界面）
+    ('canvas-host/a2ui', [
+        os.path.join(ROOT_DIR, 'openclaw', 'dist', 'canvas-host', 'a2ui'),
+        'openclaw/dist/canvas-host/a2ui',
     ]),
     # 其他可能的目录
     ('web', [

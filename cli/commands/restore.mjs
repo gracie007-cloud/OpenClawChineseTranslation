@@ -37,7 +37,7 @@ export async function restoreCommand(args) {
   console.log(`\n🦞 ${colors.bold}OpenClaw 汉化恢复工具${colors.reset}\n`);
   
   const targetArg = args.find(a => a.startsWith('--target='));
-  let targetDir = targetArg ? targetArg.split('=')[1] : await findOpenClawDir();
+  let targetDir = targetArg ? path.resolve(targetArg.split('=')[1]) : await findOpenClawDir();
   
   if (!targetDir) {
     log.error('找不到 OpenClaw 目录');

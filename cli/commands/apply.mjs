@@ -60,8 +60,8 @@ export async function applyCommand(args) {
     log.success('模式: 应用');
   }
   
-  // 确定目标目录
-  let targetDir = targetArg ? targetArg.split('=')[1] : null;
+  // 确定目标目录（支持 Windows 绝对路径）
+  let targetDir = targetArg ? path.resolve(targetArg.split('=')[1]) : null;
   
   if (!targetDir) {
     targetDir = await findOpenClawDir();

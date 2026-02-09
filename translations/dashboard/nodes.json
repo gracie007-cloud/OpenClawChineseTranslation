@@ -16,7 +16,7 @@
     "Reject": "拒绝",
     "Rotate": "轮换",
     "Revoke": "撤销",
-    "<div class=\"muted\" style=\"margin-top: 6px;\">Tokens: none</div>": "<div class=\"muted\" style=\"margin-top: 6px;\">令牌：无</div>",
+    "<div class=\"muted\" style=\"margin-top: 6px\">Tokens: none</div>": "<div class=\"muted\" style=\"margin-top: 6px\">令牌：无</div>",
     "<div class=\"muted\" style=\"margin-top: 10px;\">Tokens</div>": "<div class=\"muted\" style=\"margin-top: 10px;\">令牌</div>",
     "<div class=\"card-title\">Exec node binding</div>": "<div class=\"card-title\">执行节点绑定</div>",
     "${state.configSaving ? \"Saving…\" : \"Save\"}": "${state.configSaving ? \"保存中…\" : \"保存\"}",
