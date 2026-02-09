@@ -247,11 +247,14 @@ SCRIPT_PATH="$(cd "$(dirname "$BATS_TEST_FILENAME")/../.." && pwd)/install.sh"
     
     source "$SCRIPT_PATH"
     
-    run run_setup_if_needed
-    [ "$status" -eq 0 ]
-    # 剥离 ANSI 转义码后匹配，避免颜色码干扰
+    # 直接调用函数并捕获输出，避免 Bats run 子进程丢失函数/变量
+    local func_output
+    func_output=$(run_setup_if_needed 2>&1)
+    local func_status=$?
+    [ "$func_status" -eq 0 ]
+    # 剥离 ANSI 转义码后匹配
     local clean_output
-    clean_output=$(echo "$output" | sed 's/\x1b\[[0-9;]*m//g')
+    clean_output=$(echo "$func_output" | sed $'s/\033\\[[0-9;]*m//g')
     [[ "$clean_output" == *"OPENCLAW_SKIP_SETUP"* ]]
     
     unset OPENCLAW_SKIP_SETUP
