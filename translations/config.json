@@ -24,6 +24,8 @@
     ],
     "commands": [
       "commands/auth-choice.json",
+      "commands/auth-choice-options.json",
+      "commands/auth-choice-xai.json",
       "commands/helpers.json",
       "commands/doctor.json",
       "commands/doctor-security.json",
@@ -72,7 +74,8 @@
       "dashboard/config-form-node.json",
       "dashboard/config-form-shared.json",
       "dashboard/agents.json",
-      "dashboard/channels-feishu.json"
+      "dashboard/channels-feishu.json",
+      "dashboard/usage.json"
     ]
   }
 }

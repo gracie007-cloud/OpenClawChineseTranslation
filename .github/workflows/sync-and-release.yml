@@ -220,6 +220,36 @@ jobs:
             -d '{"visibility":"public"}' || true
           echo "✅ Docker 镜像已推送到 ghcr.io"
 
+      # ==================== Docker Hub 镜像（国内加速） ====================
+      - name: 登录 Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+        continue-on-error: true
+
+      - name: 推送到 Docker Hub（国内加速）
+        uses: docker/build-push-action@v5
+        with:
+          context: ./openclaw
+          push: true
+          tags: |
+            ${{ github.repository_owner }}/openclaw-zh:latest
+            ${{ github.repository_owner }}/openclaw-zh:${{ needs.prepare.outputs.release_version }}
+          cache-from: type=registry,ref=ghcr.io/${{ github.repository_owner }}/openclaw-zh:buildcache
+          platforms: linux/amd64,linux/arm64
+        continue-on-error: true
+
+      # 同步 Docker Hub 仓库描述
+      - name: 更新 Docker Hub 描述
+        uses: peter-evans/dockerhub-description@v4
+        with:
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: ${{ github.repository_owner }}/openclaw-zh
+          readme-filepath: ./DOCKER_README.md
+        continue-on-error: true
+
       - name: 构建摘要
         run: |
           echo "## 🦞 稳定版发布完成" >> $GITHUB_STEP_SUMMARY
@@ -235,4 +265,6 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**npm**: \`npm install -g @qingchencloud/openclaw-zh@latest\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Docker**: \`docker pull ghcr.io/${{ github.repository_owner }}/openclaw-zh:latest\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Docker (ghcr.io)**: \`docker pull ghcr.io/1186258278/openclaw-zh:latest\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Docker Hub (国内加速)**: \`docker pull 1186258278/openclaw-zh:latest\`" >> $GITHUB_STEP_SUMMARY

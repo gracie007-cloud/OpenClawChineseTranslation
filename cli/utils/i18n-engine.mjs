@@ -61,7 +61,7 @@ export async function applyTranslation(translation, targetDir, options = {}) {
   const stats = {
     file: translation.file,
     description: translation.description,
-    total: Object.keys(translation.replacements).length,
+    total: Object.keys(translation.replacements).filter(k => !k.startsWith('__comment')).length,
     applied: 0,
     skipped: 0,
     notFound: 0
@@ -79,6 +79,9 @@ export async function applyTranslation(translation, targetDir, options = {}) {
   let modified = content;
   
   for (const [original, translated] of Object.entries(translation.replacements)) {
+    // 跳过注释键（如 __comment_page_header）
+    if (original.startsWith('__comment')) continue;
+
     if (modified.includes(translated)) {
       // 已经翻译过了
       stats.skipped++;
@@ -146,6 +149,9 @@ export function printStats(allStats, options = {}) {
     : totalNotFound;
   
   console.log(`总计: 应用 ${totalAppliedStr} | 已存在 ${totalSkipped} | 未找到 ${totalNotFoundStr}`);
+  
+  // 机器可读的统计行，用于 CI/CD 提取（不含 ANSI 颜色码）
+  console.log(`##STATS##applied=${totalApplied}|existed=${totalSkipped}|failed=${totalNotFound}##`);
   
   if (dryRun) {
     log.warn('\n🔍 预览模式 - 未实际修改任何文件');
