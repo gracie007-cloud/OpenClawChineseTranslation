@@ -143,6 +143,19 @@ jobs:
           node cli/index.mjs verify || true
           echo "✅ 汉化验证完成"
 
+      - name: 修复上游类型错误
+        working-directory: openclaw
+        run: |
+          # 修复 discord/monitor/agent-components.ts 类型错误
+          # Error: Type '"channel" | "dm"' is not assignable to type 'ChatType'
+          if [ -f src/discord/monitor/agent-components.ts ]; then
+            echo "🔧 尝试修复 discord agent-components.ts..."
+            sed -i 's/kind: isDirectMessage ? "dm" : "channel"/kind: isDirectMessage ? "direct" : "channel"/g' src/discord/monitor/agent-components.ts
+            # 如果已经是 direct，上面的 sed 不会生效，但下面这个通用的可能会误伤，所以仅针对特定模式
+            # 另外检查是否还有 "dm" 作为类型被使用
+            grep -n "kind: isDirectMessage" src/discord/monitor/agent-components.ts || true
+          fi
+
       - name: 构建 OpenClaw
         working-directory: openclaw
         run: |
