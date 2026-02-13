@@ -22,7 +22,21 @@
 
 ---
 
-## 3 步上手
+## 🏷️ 合作伙伴
+
+**胜算云** - 国内 AI API 聚合平台，新用户注册送额度，充值尊享 7 折优惠！
+
+| 阶梯 | 春节消耗 | 奖励 |
+|------|---------|------|
+| 尝鲜礼 | ≥50元 | 5元 模力券 |
+| 极客礼 | ≥100元 | 10元 模力券 + Kimi K2.5 七折卡(7天) |
+| 大神礼 | ≥500元 | 50元 模力券 + Kimi K2.5 七折卡(7天) |
+
+[查看活动 →](https://www.shengsuanyun.com/activity/4184b48a6be4443cbe13e86e091e43b4?from=CH_4BVI0BM2) · [注册账号 →](https://www.shengsuanyun.com/?from=CH_4BVI0BM2)
+
+---
+
+## 4 步上手
 
 > **前提条件**：需要 **Node.js >= 22**（[下载 Node.js](https://nodejs.org/)）
 >
@@ -34,15 +48,21 @@
 npm install -g @qingchencloud/openclaw-zh@latest
 ```
 
-### 第 2 步：初始化
+### 第 2 步：初始化（推荐守护进程模式）
 
 ```bash
-openclaw onboard
+openclaw onboard --install-daemon
 ```
 
 初始化向导会引导你完成：选择 AI 模型 → 配置 API 密钥 → 设置聊天通道
 
-### 第 3 步：打开控制台
+### 第 3 步：启动网关
+
+```bash
+openclaw gateway
+```
+
+### 第 4 步：打开控制台
 
 ```bash
 openclaw dashboard
@@ -108,7 +128,84 @@ openclaw dashboard          # 打开网页控制台
 openclaw config             # 查看/修改配置
 openclaw skills             # 管理技能
 openclaw --help             # 查看帮助
+
+# 网关管理
+openclaw gateway run        # 前台运行（挂终端，用于调试）
+openclaw gateway start      # 后台守护进程（不挂终端，推荐！）
+openclaw gateway stop       # 停止网关
+openclaw gateway restart    # 重启网关
+openclaw gateway status     # 查看网关状态
+openclaw gateway install    # 安装为系统服务（开机自启）
+
+# 常用操作
+openclaw update             # 检查并更新 CLI
+openclaw doctor             # 诊断问题（自动修复）
 ```
+
+> **Windows 用户注意**：如果 `gateway install` 失败（提示 schtasks 不可用），可使用 `gateway start` 启动后台进程，或使用 Docker 部署方案。
+
+---
+
+## 网关重启
+
+```bash
+# 方式 1：使用 gateway 子命令（推荐）
+openclaw gateway restart
+
+# 方式 2：先停止再启动
+openclaw gateway stop
+openclaw gateway start
+
+# 方式 3：守护进程模式（后台运行，不挂终端）
+openclaw daemon start       # 启动后台守护
+openclaw daemon stop        # 停止守护
+openclaw daemon restart    # 重启守护
+openclaw daemon status     # 查看状态
+
+# Docker 容器重启
+docker restart openclaw
+```
+
+---
+
+## 卸载教程
+
+### CLI 卸载
+
+```bash
+# 卸载汉化版
+npm uninstall -g @qingchencloud/openclaw-zh
+
+# 如果之前安装过原版，也一并卸载
+npm uninstall -g openclaw
+```
+
+### 数据清理（可选）
+
+```bash
+# 删除配置和缓存（不可恢复！）
+rm -rf ~/.openclaw
+
+# Docker 清理
+docker rm -f openclaw                # 删除容器
+docker volume rm openclaw-data       # 删除数据卷
+```
+
+### 守护进程卸载
+
+```bash
+# macOS
+launchctl unload ~/Library/LaunchAgents/com.openclaw.plist
+rm ~/Library/LaunchAgents/com.openclaw.plist
+
+# Linux (systemd)
+sudo systemctl stop openclaw
+sudo systemctl disable openclaw
+sudo rm /etc/systemd/system/openclaw.service
+sudo systemctl daemon-reload
+```
+
+---
 
 ---
 
@@ -156,15 +253,27 @@ irm https://cdn.jsdelivr.net/gh/1186258278/OpenClawChineseTranslation@main/docke
 IMAGE=1186258278/openclaw-zh:latest
 # 海外用户使用: IMAGE=ghcr.io/1186258278/openclaw-zh:latest
 
-# 1. 初始化
-docker run --rm -v openclaw-data:/root/.openclaw $IMAGE openclaw setup
+# 1. 初始化（首次运行）
+# Docker 需要交互式运行来配置 AI 模型和 API 密钥
+docker run --rm -it -v openclaw-data:/root/.openclaw $IMAGE openclaw onboard
+
+# 按向导完成：选择模型 → 配置 API 密钥 → 设置聊天通道
+
+# 2. 配置网关模式
 docker run --rm -v openclaw-data:/root/.openclaw $IMAGE openclaw config set gateway.mode local
 
-# 2. 启动
+# 3. 启动（守护进程模式，容器会一直运行）
 docker run -d --name openclaw -p 18789:18789 \
   -v openclaw-data:/root/.openclaw --restart unless-stopped \
   $IMAGE openclaw gateway run
 ```
+
+**参数说明：**
+- `-d`: 后台运行（守护进程模式）
+- `--name openclaw`: 给容器取名，方便管理
+- `-p 18789:18789`: 端口映射
+- `--restart unless-stopped`: 除非手动停止，否则一直运行
+- `openclaw gateway run`: 启动网关（容器启动命令）
 
 访问：`http://localhost:18789`
 
