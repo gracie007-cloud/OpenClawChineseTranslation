@@ -13,6 +13,6 @@
     "message: \"Install gateway service now?\"": "message: \"现在安装网关服务？\"",
     "message: \"Gateway service runtime\"": "message: \"网关服务运行时\"",
     "message: \"Restart gateway service now?\"": "message: \"现在重启网关服务？\"",
-    "note(`Gateway service install failed: ${String(err)}\`, \"Gateway\");": "note(`网关服务安装失败：${String(err)}\`，\"网关\");"
+    "note(`Gateway service install failed: ${String(err)}`, \"Gateway\");": "note(`网关服务安装失败：${String(err)}`, \"网关\");"
   }
 }

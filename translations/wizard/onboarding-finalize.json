@@ -2,9 +2,9 @@
   "file": "src/wizard/onboarding.finalize.ts",
   "description": "初始化向导最终步骤",
   "replacements": {
-    "message: \"Gateway service runtime\": \"message: \"网关服务运行时\"",
-    "\"QuickStart uses Node for the Gateway service (stable + supported).\": \"\"快速开始使用 Node 运行网关服务（稳定 + 受支持）。\"",
-    "message: \"Gateway service already installed\": \"message: \"网关服务已安装\"",
+    "message: \"Gateway service runtime\"": "message: \"网关服务运行时\"",
+    "\"QuickStart uses Node for the Gateway service (stable + supported).\"": "\"快速开始使用 Node 运行网关服务（稳定 + 受支持）。\"",
+    "message: \"Gateway service already installed\"": "message: \"网关服务已安装\"",
     "{ value: \"restart\", label: \"Restart\" }": "{ value: \"restart\", label: \"重启\" }",
     "{ value: \"reinstall\", label: \"Reinstall\" }": "{ value: \"reinstall\", label: \"重新安装\" }",
     "{ value: \"skip\", label: \"Skip\" }": "{ value: \"skip\", label: \"跳过\" }",
