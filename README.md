@@ -16,7 +16,7 @@
 
 ## 什么是 OpenClaw？
 
-[OpenClaw](https://openclaw.ai/) 是 GitHub 100,000+ Stars 的**开源个人 AI 助手平台**。它运行在你的电脑上，通过 WhatsApp、Telegram、Discord 等聊天应用与你的 AI 助手交互，帮你处理邮件、日历、文件等日常事务。
+[OpenClaw](https://openclaw.ai/) 是 GitHub 195,000+ Stars 的**开源个人 AI 助手平台**。它运行在你的电脑上，通过 WhatsApp、Telegram、Discord 等聊天应用与你的 AI 助手交互，帮你处理邮件、日历、文件等日常事务。
 
 **本项目 = OpenClaw + 全中文界面**，CLI 命令行和 Dashboard 网页控制台均已深度汉化。
 
@@ -413,6 +413,7 @@ docker run --rm -v openclaw-data:/root/.openclaw \
 | 问题 | 快速解决 | 详情 |
 |------|----------|------|
 | **远程 / 内网访问不了** | `openclaw config set gateway.bind lan` 然后重启 | [查看 →](docs/FAQ.md#npm-安装后内网其他电脑无法访问) |
+| **镜像源版本落后** | 去掉 `--registry` 参数直接安装，或等待镜像同步（已自动触发） | [#32](https://github.com/1186258278/OpenClawChineseTranslation/issues/32) |
 | **`Missing config`** | 运行 `openclaw onboard` 初始化配置 | [查看 →](docs/FAQ.md#missing-config-run-openclaw-setup) |
 | **`Missing workspace template`** | 升级到最新版即可：`npm install -g @qingchencloud/openclaw-zh@latest` | [查看 →](docs/FAQ.md#missing-workspace-template-agentsmd) |
 | **Ollama 无响应** | 检查 baseURL 是否为 `http://localhost:11434/v1` | [查看 →](docs/FAQ.md#本地-ollama-模型调用无响应) |
@@ -434,7 +435,26 @@ npm install -g @qingchencloud/openclaw-updater
 
 ---
 
-## 微信交流群
+## 社区交流
+
+<p align="center">
+  <a href="https://discord.gg/U9AttmsNHh"><img src="https://img.shields.io/badge/Discord-加入社区-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+  &nbsp;&nbsp;
+  <a href="https://yb.tencent.com/gp/i/LsvIw7mdR7Lb"><img src="https://img.shields.io/badge/元宝派-加入圈子-FF6A00?style=for-the-badge&logo=tencent-qq&logoColor=white" alt="元宝派"></a>
+</p>
+
+### 微信交流群
+
+<p align="center">
+  <img src="docs/image/wx_04.png" alt="微信交流4群" width="200px">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="docs/image/wx_05.png" alt="微信交流5群" width="200px">
+  <br>
+  <em>4群快满了，推荐扫码加入5群 | 碰到问题也可以直接在群内反馈</em>
+</p>
+
+<details>
+<summary><b>1~3群已满（点击查看）</b></summary>
 
 <p align="center">
   <img src="docs/image/wx_01.png" alt="微信交流1群" width="200px">
@@ -442,11 +462,11 @@ npm install -g @qingchencloud/openclaw-updater
   <img src="docs/image/wx_02.png" alt="微信交流2群" width="200px">
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="docs/image/wx_03.png" alt="微信交流3群" width="200px">
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="docs/image/wx_04.png" alt="微信交流4群" width="200px">
   <br>
-  <em>1群、2群、3群均已满200人，请扫码加入4群 | 碰到问题也可以直接在群内反馈</em>
+  <em>1群、2群、3群均已满200人</em>
 </p>
+
+</details>
 
 ---
 
@@ -457,7 +477,7 @@ npm install -g @qingchencloud/openclaw-updater
 | [汉化官网](https://openclaw.qt.cool/) | [OpenClaw 官网](https://openclaw.ai/) |
 | [npm 包](https://www.npmjs.com/package/@qingchencloud/openclaw-zh) | [OpenClaw GitHub](https://github.com/openclaw/openclaw) |
 | [GitHub 仓库](https://github.com/1186258278/OpenClawChineseTranslation) | [ClawHub 技能市场](https://clawhub.dev/) |
-| [GitHub Pages](https://1186258278.github.io/OpenClawChineseTranslation/) | [Discord 社区](https://discord.gg/openclaw) |
+| [GitHub Pages](https://1186258278.github.io/OpenClawChineseTranslation/) | [Discord 社区](https://discord.gg/U9AttmsNHh) |
 
 ---
 
