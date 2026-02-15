@@ -2,8 +2,6 @@
   "file": "src/commands/auth-choice.apply.api-providers.ts",
   "description": "API 提供商认证交互",
   "replacements": {
-    "message: `Use existing OPENROUTER_API_KEY (${envKey.source}, ${formatApiKeyPreview(envKey.apiKey)})?`": "message: `使用现有的 OPENROUTER_API_KEY (${envKey.source}, ${formatApiKeyPreview(envKey.apiKey)})?`",
-    "message: \"Enter OpenRouter API key\"": "message: \"输入 OpenRouter API 密钥\"",
     "message: `Use existing AI_GATEWAY_API_KEY (${envKey.source}, ${formatApiKeyPreview(envKey.apiKey)})?`": "message: `使用现有的 AI_GATEWAY_API_KEY (${envKey.source}, ${formatApiKeyPreview(envKey.apiKey)})?`",
     "message: \"Enter Vercel AI Gateway API key\"": "message: \"输入 Vercel AI Gateway API 密钥\"",
     "message: \"Enter Cloudflare Account ID\"": "message: \"输入 Cloudflare 账户 ID\"",

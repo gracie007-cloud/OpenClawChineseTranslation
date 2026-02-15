@@ -13,12 +13,10 @@
     "hint: \"Privacy-focused (uncensored models)\"": "hint: \"隐私优先（无审查模型）\"",
     "hint: \"Account ID + Gateway ID + API key\"": "hint: \"账户 ID + 网关 ID + API 密钥\"",
     "hint: \"Any OpenAI or Anthropic compatible endpoint\"": "hint: \"任意 OpenAI 或 Anthropic 兼容端点\"",
-    "hint: \"Inference API (HF token)\"": "hint: \"推理 API（HF 令牌）\"",
     "hint: \"Unified LLM gateway (100+ providers)\"": "hint: \"统一 LLM 网关（100+ 提供商）\"",
     "hint: \"OAuth\"": "hint: \"OAuth\"",
     "hint: \"GLM Coding Plan / Global / CN\"": "hint: \"GLM 编程计划 / 国际版 / 国内版\"",
     "label: \"Custom Provider\"": "label: \"自定义服务商\"",
-    "label: \"Custom Provider API key\"": "label: \"自定义服务商 API 密钥\"",
     "label: \"Skip for now\"": "label: \"暂时跳过\"",
     "label: \"Anthropic token (paste setup-token)\"": "label: \"Anthropic 令牌（粘贴 setup-token）\"",
     "hint: \"run `claude setup-token` elsewhere, then paste the token here\"": "hint: \"在其他地方运行 `claude setup-token`，然后在此粘贴令牌\"",
@@ -43,7 +41,6 @@
     "hint: \"Uses the bundled Antigravity auth plugin\"": "hint: \"使用内置 Antigravity 认证插件\"",
     "label: \"Google Gemini CLI OAuth\"": "label: \"Google Gemini CLI OAuth\"",
     "hint: \"Uses the bundled Gemini CLI auth plugin\"": "hint: \"使用内置 Gemini CLI 认证插件\"",
-    "label: \"Z.AI (GLM 4.7) API key\"": "label: \"Z.AI（GLM 4.7）API 密钥\"",
     "label: \"Xiaomi API key\"": "label: \"小米 API 密钥\"",
     "label: \"MiniMax OAuth\"": "label: \"MiniMax OAuth\"",
     "hint: \"Oauth plugin for MiniMax\"": "hint: \"MiniMax 的 OAuth 插件\"",
@@ -56,13 +53,15 @@
     "label: \"MiniMax M2.5\"": "label: \"MiniMax M2.5\"",
     "label: \"MiniMax M2.5 Lightning\"": "label: \"MiniMax M2.5 Lightning\"",
     "hint: \"Faster, higher output cost\"": "hint: \"更快，输出成本更高\"",
-    "label: \"Hugging Face API key\"": "label: \"Hugging Face API 密钥\"",
     "label: \"LiteLLM API key\"": "label: \"LiteLLM API 密钥\"",
     "label: \"Coding-Plan-CN\"": "label: \"编程计划-国内版\"",
+    "label: \"Coding-Plan-Global\"": "label: \"编程计划-国际版\"",
     "hint: \"GLM Coding Plan CN (open.bigmodel.cn)\"": "hint: \"GLM 编程计划国内版 (open.bigmodel.cn)\"",
+    "hint: \"GLM Coding Plan Global (api.z.ai)\"": "hint: \"GLM 编程计划国际版 (api.z.ai)\"",
     "label: \"Global\"": "label: \"国际版\"",
     "hint: \"Z.AI Global (api.z.ai)\"": "hint: \"Z.AI 国际版 (api.z.ai)\"",
     "label: \"CN\"": "label: \"国内版\"",
-    "hint: \"Z.AI CN (open.bigmodel.cn)\"": "hint: \"Z.AI 国内版 (open.bigmodel.cn)\""
+    "hint: \"Z.AI CN (open.bigmodel.cn)\"": "hint: \"Z.AI 国内版 (open.bigmodel.cn)\"",
+    "label: \"Z.AI API key\"": "label: \"Z.AI API 密钥\""
   }
 }

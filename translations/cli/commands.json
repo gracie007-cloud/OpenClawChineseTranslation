@@ -3,9 +3,7 @@
   "description": "CLI 子命令列表说明",
   "replacements": {
     "Agent Control Protocol tools": "Agent 控制协议 (ACP) 工具",
-    "Run an agent turn via the Gateway (use --local for embedded)": "通过网关运行一个 Agent 回合（使用 --local 可嵌入运行）",
-    "Manage isolated agents (workspaces + auth + routing)": "管理隔离的 Agent（工作区 + 认证 + 路由）",
-    "Manage OpenClaw's dedicated browser (Chrome/Chromium)": "管理 OpenClaw 专用浏览器（Chrome/Chromium）",
+
     "Gateway control": "网关控制",
     "Gateway service (legacy alias)": "网关服务（旧版别名）",
     "Gateway logs": "网关日志",
@@ -30,18 +28,7 @@
     "Skills management": "技能管理",
     "CLI update helpers": "CLI 更新工具",
     "Generate shell completion script": "生成 Shell 补全脚本",
-    "Config helpers (get/set/unset). Run without subcommand for the wizard.": "配置助手（获取/设置/取消）。直接运行可进入配置向导。",
-    "Interactive prompt to set up credentials, devices, and agent defaults": "交互式设置向导（凭证、设备和 Agent 默认值）",
-    "Open the Control UI with your current token": "使用当前令牌打开控制面板",
-    "Fetch health from the running gateway": "从运行中的网关获取健康状态",
-    "Memory search tools": "记忆搜索工具",
-    "Send messages and channel actions": "发送消息和渠道操作",
-    "List stored conversation sessions": "列出已存储的会话",
-    "Initialize ~/.openclaw/openclaw.json and the agent workspace": "初始化 ~/.openclaw/openclaw.json 和 Agent 工作区",
-    "Show channel health and recent session recipients": "显示渠道健康状态和最近会话接收者",
-    "Health checks + quick fixes for the gateway and channels": "网关和渠道健康检查 + 快速修复",
-    "Interactive wizard to set up the gateway, workspace, and skills": "交互式设置向导（网关、工作区和技能）",
-    "Reset local config/state (keeps the CLI installed)": "重置本地配置/状态（保留 CLI）",
+
     "Webhooks": "Webhook 工具"
   }
 }

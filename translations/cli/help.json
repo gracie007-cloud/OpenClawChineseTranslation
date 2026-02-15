@@ -2,8 +2,6 @@
   "file": "src/cli/program/help.ts",
   "description": "CLI 帮助信息",
   "replacements": {
-    "-h, --help        display help for command": "-h, --help        显示命令帮助",
-    "-V, --version     output the version number": "-V, --version     显示版本号",
     "Link personal WhatsApp Web and show QR + connection logs.": "关联个人 WhatsApp Web 并显示二维码和连接日志。",
     "Send via your web session and print JSON result.": "通过你的 Web 会话发送并打印 JSON 结果。",
     "Run the WebSocket Gateway locally.": "在本地运行 WebSocket 网关。",

@@ -18,7 +18,6 @@
     "\"DM security: default is pairing; unknown DMs get a pairing code.\"": "\"私信安全: 默认配对；未知私信将获得配对码。\"",
     "`Approve with: ${formatCliCommand(\"openclaw pairing approve <channel> <code>\")}`": "`批准命令: ${formatCliCommand(\"openclaw pairing approve <channel> <code>\")}`",
     "'Public DMs require dmPolicy=\"open\" + allowFrom=[\"*\"].'": "'公开私信需要 dmPolicy=\"open\" + allowFrom=[\"*\"].'",
-    "'Multi-user DMs: set session.dmScope=\"per-channel-peer\" (or \"per-account-channel-peer\" for multi-account channels) to isolate sessions.'": "'多用户私信: 设置 session.dmScope=\"per-channel-peer\" (或多账户渠道的 \"per-account-channel-peer\") 以隔离会话。'",
     "\"How channels work\"": "\"渠道工作原理\"",
     "message: \"Configure DM access policies now? (default: pairing)\"": "message: \"现在配置私信访问策略吗？(默认: 配对)\"",
     "\"Default: pairing (unknown DMs get a pairing code).\"": "\"默认: 配对 (未知私信将获得配对码)。\"",
@@ -34,7 +33,6 @@
     "\"plugin disabled\"": "\"插件已禁用\"",
     "\"plugins disabled\"": "\"插件已禁用\"",
     "\"disabled\"": "\"已禁用\"",
-    "`Cannot enable ${channel}: ${result.reason ?? \"plugin disabled\"}.`": "`无法启用 ${channel}: ${result.reason ?? \"插件已禁用\"}。`",
     "`${channel} plugin not available.`": "`${channel} 插件不可用。`",
     "`${channel} does not support onboarding yet.`": "`${channel} 暂不支持初始化向导。`",
     "`${label} does not support deleting config entries.`": "`${label} 不支持删除配置条目。`",
@@ -45,6 +43,7 @@
     "message: \"Select a channel\"": "message: \"选择一个渠道\"",
     "label: \"Finished\"": "label: \"完成\"",
     "hint: selection.length > 0 ? \"Done\" : \"Skip for now\"": "hint: selection.length > 0 ? \"完成\" : \"暂时跳过\"",
-    "\"Selected channels\"": "\"已选渠道\""
+    "\"Selected channels\"": "\"已选渠道\"",
+    "`Cannot enable ${channel}: ${result.reason ?? \"插件已禁用\"}.`": "`无法启用 ${channel}: ${result.reason ?? \"插件已禁用\"}。`"
   }
 }

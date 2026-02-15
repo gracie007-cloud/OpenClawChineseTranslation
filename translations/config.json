@@ -13,9 +13,10 @@
       "cli/tagline.json",
       "cli/help.json",
       "cli/commands.json",
-      "cli/models-cli.json"
+      "cli/models-cli.json",
+      "cli/command-registry.json"
     ],
-"wizard": [
+    "wizard": [
       "wizard/onboarding.json",
       "wizard/onboarding-gateway-config.json",
       "wizard/security.json",
@@ -26,7 +27,7 @@
       "tui/waiting.json",
       "tui/commands.json"
     ],
-"commands": [
+    "commands": [
       "commands/auth-choice.json",
       "commands/auth-choice-options.json",
       "commands/auth-choice-xai.json",
@@ -80,6 +81,7 @@
       "dashboard/debug.json",
       "dashboard/logs.json",
       "dashboard/schema.json",
+      "dashboard/schema-core.json",
       "dashboard/config-form-render.json",
       "dashboard/config-form-node.json",
       "dashboard/config-form-shared.json",
