@@ -438,6 +438,8 @@ npm install -g @qingchencloud/openclaw-updater
 
 <p align="center">
   <a href="https://discord.gg/U9AttmsNHh"><img src="https://img.shields.io/badge/Discord-加入社区-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+  &nbsp;&nbsp;
+  <a href="https://yb.tencent.com/gp/i/LsvIw7mdR7Lb"><img src="https://img.shields.io/badge/元宝派-加入圈子-FF6A00?style=for-the-badge&logo=tencent-qq&logoColor=white" alt="元宝派"></a>
 </p>
 
 ### 微信交流群
