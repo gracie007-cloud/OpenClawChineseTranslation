@@ -71,6 +71,33 @@ openclaw --version
 
 ---
 
+### 安装报错 `Permission denied (publickey)` / `git error code 128`
+
+**你会看到**：
+```
+npm error code 128
+npm error An unknown git error occurred
+npm error command git --no-replace-objects ls-remote ssh://git@github.com/whiskeysockets/libsignal-node.git
+npm error git@github.com: Permission denied (publickey).
+npm error fatal: 无法读取远程仓库。
+```
+
+**原因**：OpenClaw 的某个依赖（WhatsApp 连接器）引用了一个 GitHub SSH 地址的子依赖。你的机器上没有配置 GitHub SSH 密钥，npm 无法通过 SSH 协议拉取代码。
+
+**解决方案**：
+
+```bash
+# 让 git 自动把 SSH 地址转成 HTTPS（一行命令，永久生效）
+git config --global url."https://github.com/".insteadOf ssh://git@github.com/
+
+# 然后重新安装
+npm install -g @qingchencloud/openclaw-zh@latest
+```
+
+> 这个配置只影响 `ssh://git@github.com/` 开头的地址，不会影响你自己的 SSH 使用。
+
+---
+
 ### 启动时提示 "JavaScript heap out of memory"
 
 **你会看到**：
