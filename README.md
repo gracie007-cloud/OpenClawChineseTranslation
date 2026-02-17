@@ -343,6 +343,41 @@ npx @qingchencloud/openclaw-zh@latest
 
 ---
 
+## 📱 手机端 — ClawApp
+
+> **想用手机和 AI 智能体聊天？** [ClawApp](https://github.com/qingchencloud/clawapp) 是 OpenClaw 的移动端 H5 聊天客户端，打开浏览器就能用，不需要装 App。
+
+OpenClaw Gateway 默认只监听本机（`127.0.0.1:18789`），手机无法直接连接。ClawApp 通过 WebSocket 代理解决了这个问题：
+
+```
+手机浏览器（任意网络）
+    ↓ WebSocket (WS / WSS)
+ClawApp 代理服务端（端口 3210）
+    ↓ WebSocket (localhost)
+OpenClaw Gateway（端口 18789）
+```
+
+**核心特性**：实时流式聊天 · 图片发送 · Markdown 渲染 + 代码高亮 · 快捷指令 · 会话管理 · 暗色/亮色主题 · 中英文切换 · PWA 支持 · Android APK
+
+**快速部署**（Docker 一键启动）：
+
+```bash
+git clone https://github.com/qingchencloud/clawapp.git
+cd clawapp
+
+# 创建 .env，填入你的 Token
+echo 'PROXY_TOKEN=设置一个连接密码' > .env
+echo 'OPENCLAW_GATEWAY_TOKEN=你的gateway-token' >> .env
+
+docker compose up -d --build
+```
+
+手机浏览器打开 `http://你的电脑IP:3210` 即可使用。
+
+> 详细文档（外网访问、Cloudflare Tunnel、Nginx 反代等）请查看 **[ClawApp 项目主页](https://github.com/qingchencloud/clawapp)** | **[产品官网](https://clawapp.qt.cool/)**
+
+---
+
 ## 常见问题
 
 ### 🔥 Top 3 高频问题
@@ -441,6 +476,16 @@ npm install -g @qingchencloud/openclaw-updater
   <a href="https://discord.gg/U9AttmsNHh"><img src="https://img.shields.io/badge/Discord-加入社区-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
   &nbsp;&nbsp;
   <a href="https://yb.tencent.com/gp/i/LsvIw7mdR7Lb"><img src="https://img.shields.io/badge/元宝派-加入圈子-FF6A00?style=for-the-badge&logo=tencent-qq&logoColor=white" alt="元宝派"></a>
+  &nbsp;&nbsp;
+  <a href="https://qm.qq.com/q/qUfdR0jJVS"><img src="https://img.shields.io/badge/QQ群-244979483-12B7F5?style=for-the-badge&logo=tencent-qq&logoColor=white" alt="QQ群"></a>
+</p>
+
+### QQ 交流群（2000 人大群）
+
+<p align="center">
+  <img src="docs/image/qq_01.jpg" alt="QQ交流群" width="200px">
+  <br>
+  <em>QQ 群号：244979483 | 扫码加入，交流 OpenClaw 使用心得</em>
 </p>
 
 ### 微信交流群
@@ -478,6 +523,7 @@ npm install -g @qingchencloud/openclaw-updater
 | [npm 包](https://www.npmjs.com/package/@qingchencloud/openclaw-zh) | [OpenClaw GitHub](https://github.com/openclaw/openclaw) |
 | [GitHub 仓库](https://github.com/1186258278/OpenClawChineseTranslation) | [ClawHub 技能市场](https://clawhub.dev/) |
 | [GitHub Pages](https://1186258278.github.io/OpenClawChineseTranslation/) | [Discord 社区](https://discord.gg/U9AttmsNHh) |
+| [📱 ClawApp 手机端](https://github.com/qingchencloud/clawapp) | [ClawApp 产品官网](https://clawapp.qt.cool/) |
 
 ---
 
