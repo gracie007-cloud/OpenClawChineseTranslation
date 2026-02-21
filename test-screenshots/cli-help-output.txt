@@ -1,0 +1,84 @@
+
+🦞 OpenClaw 中文版 2026.2.18 (3c886ee) — Greetings, Professor Falken
+
+Usage: openclaw [options] [command]
+
+Options:
+  --dev             开发配置：在 ~/.openclaw-dev 下隔离状态，默认网关端口 19001，并移动派生端口（浏览器/画布）
+  -h, --help        Display help for command
+  --no-color        禁用 ANSI 颜色
+  --profile <name>  使用命名配置文件（在 ~/.openclaw-<name> 下隔离状态和配置）
+  -V, --version     output the version number
+
+Commands:
+  Hint: commands suffixed with * have subcommands. Run <command> --help for details.
+  acp *             Agent Control Protocol tools
+  agent             通过网关运行一次代理
+  agents *          管理隔离的代理（工作区、认证、路由）
+  approvals *       管理执行审批（网关或节点主机）
+  browser *         管理 OpenClaw 专用浏览器（Chrome/Chromium）
+  channels *        管理已连接的聊天渠道（Telegram、Discord 等）
+  clawbot *         旧版 clawbot 命令别名
+  completion        Generate shell completion script
+  config *          Non-interactive config helpers (get/set/unset). Default:
+                    starts setup wizard.
+  configure         Interactive setup wizard for credentials, channels, gateway,
+                    and agent defaults
+  cron *            通过网关调度器管理定时任务
+  daemon *          Gateway service (legacy alias)
+  dashboard         Open the Control UI with your current token
+  devices *         Device pairing + token management
+  directory *       查询支持渠道的联系人和群组 ID
+  dns *             DNS 工具 - 广域发现（Tailscale + CoreDNS）
+  docs              搜索 OpenClaw 在线文档
+  doctor            Health checks + quick fixes for the gateway and channels
+  gateway *         运行、检查和查询 WebSocket 网关
+  health            从运行中的网关获取健康状态
+  help              Display help for command
+  hooks *           管理内部代理 Hooks
+  logs              通过 RPC 查看网关日志
+  memory *          搜索和重建记忆文件索引
+  message *         Send, read, and manage messages
+  models *          发现、扫描和配置模型
+  node *            运行和管理无头节点主机服务
+  nodes *           管理网关节点配对和节点命令
+  onboard           网关、工作区和技能的交互式引导向导
+  pairing *         安全私信配对（审批入站请求）
+  plugins *         管理 OpenClaw 插件和扩展
+  qr                生成 iOS 配对二维码/设置码
+  reset             Reset local config/state (keeps the CLI installed)
+  sandbox *         管理沙箱容器以隔离代理
+  security *        安全工具和本地配置审计
+  sessions          列出已存储的对话会话
+  setup             初始化本地配置和代理工作区
+  skills *          列出和检查可用技能
+  status            显示渠道健康状态和最近会话接收者
+  system *          System events, heartbeat, and presence
+  tui               打开连接到网关的终端界面
+  uninstall         Uninstall the gateway service + local data (CLI remains)
+  update *          更新 OpenClaw 并检查更新渠道状态
+  webhooks *        Webhook 工具与集成
+
+示例：
+  openclaw models --help
+    Show detailed help for the models command.
+  openclaw channels login --verbose
+    关联个人 WhatsApp Web 并显示二维码和连接日志。
+  openclaw message send --target +15555550123 --message "Hi" --json
+    通过你的 Web 会话发送并打印 JSON 结果。
+  openclaw gateway --port 18789
+    在本地运行 WebSocket 网关。
+  openclaw --dev gateway
+    在 ws://127.0.0.1:19001 上运行开发网关（隔离状态/配置）。
+  openclaw gateway --force
+    终止占用默认网关端口的进程，然后启动网关。
+  openclaw gateway ...
+    通过 WebSocket 控制网关。
+  openclaw agent --to +15555550123 --message "Run summary" --deliver
+    通过网关直接与 AI 助手对话；可选发送 WhatsApp 回复。
+  openclaw message send --channel telegram --target @mychat --message "Hi"
+    通过你的 Telegram 机器人发送。
+
+文档： https://docs.openclaw.ai/cli
+汉化版： https://openclaw.qt.cool/
+

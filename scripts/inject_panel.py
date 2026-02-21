@@ -140,6 +140,18 @@ def inject_to_directory(name, build_dir, panel_js, panel_css, inject_marker):
         if is_main_bundle:
             content = read_file(js_file)
 
+            # 修复上游 i18n bug：loadLocale() 检测到非英文 locale 但不自动加载翻译文件
+            # 问题：constructor 调用 loadLocale() 设置 this.locale="zh-CN"，但翻译文件只在 setLocale() 中异步加载
+            #        而 setLocale() 有 guard `if(this.locale!==t)` 导致同 locale 不触发加载
+            # 修复：检测到非英文 locale 且翻译未加载时，临时重置为 "en" 再调用 setLocale
+            i18n_bug_pattern = 'this.loadLocale()}loadLocale()'
+            if i18n_bug_pattern in content:
+                content = content.replace(
+                    i18n_bug_pattern,
+                    'this.loadLocale();if(this.locale!=="en"&&!this.translations[this.locale]){const _l=this.locale;this.locale="en";this.setLocale(_l)}}loadLocale()'
+                )
+                print(f"   ✅ i18n 自动加载修复已注入")
+
             new_content, replaced = upsert_marked_block(content, inject_marker, js_to_inject)
             if new_content != content:
                 write_file(js_file, new_content)

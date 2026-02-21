@@ -42,6 +42,12 @@ for (const [category, files] of Object.entries(config.modules)) {
       continue;
     }
 
+    // 跳过 copyFiles 类型（无 file 字段）
+    if (!json.file) {
+      console.log(`⏭️  ${file}: copyFiles 类型, 跳过验证`);
+      continue;
+    }
+
     const sourceFile = path.join(UPSTREAM, json.file);
     let sourceContent;
     try {
