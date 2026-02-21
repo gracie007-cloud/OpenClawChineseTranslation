@@ -494,9 +494,11 @@ npm install -g @qingchencloud/openclaw-updater
 ### 微信交流群
 
 <p align="center">
+  <img src="docs/image/wx_05.png" alt="微信交流5群" width="200px">
+  &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="docs/image/wx_06.png" alt="微信交流6群" width="200px">
   <br>
-  <em>扫码加入6群 | 碰到问题也可以直接在群内反馈</em>
+  <em>5群快满了，推荐扫码加入6群 | 碰到问题也可以直接在群内反馈</em>
 </p>
 
 ---
