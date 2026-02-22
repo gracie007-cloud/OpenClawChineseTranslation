@@ -95,7 +95,14 @@ jobs:
 
       - name: 克隆上游代码
         run: |
-          git clone --depth 1 https://github.com/${{ env.UPSTREAM_REPO }}.git openclaw
+          if [ "${{ inputs.version_type }}" = "stable" ]; then
+            # 稳定版：克隆指定 tag，避免 main 分支版本号超前导致版本倒挂
+            echo "📌 克隆上游 tag v${{ inputs.upstream_version }}..."
+            git clone --depth 1 --branch v${{ inputs.upstream_version }} https://github.com/${{ env.UPSTREAM_REPO }}.git openclaw
+          else
+            # Nightly：追踪 main 分支最新代码
+            git clone --depth 1 https://github.com/${{ env.UPSTREAM_REPO }}.git openclaw
+          fi
           cd openclaw
           COMMIT_SHA=$(git rev-parse --short HEAD)
           echo "✅ 上游代码已克隆 (commit: $COMMIT_SHA)"
