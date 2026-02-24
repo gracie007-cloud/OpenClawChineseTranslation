@@ -24,14 +24,16 @@
       "wizard/onboarding-finalize.json"
     ],
     "gateway": [
-      "gateway/gateway-config-prompts.shared.json"
+      "gateway/gateway-config-prompts.shared.json",
+      "gateway/control-ui-csp.json"
     ],
     "shared": [
       "shared/net/ipv4.json"
     ],
     "tui": [
       "tui/waiting.json",
-      "tui/commands.json"
+      "tui/commands.json",
+      "tui/tui-pairing.json"
     ],
     "commands": [
       "commands/auth-choice.json",
@@ -57,7 +59,21 @@
       "commands/uninstall.json",
       "commands/package-root-fix.json",
       "commands/model-picker.json",
-      "commands/auth-choice-apply-helpers.json"
+      "commands/auth-choice-apply-helpers.json",
+      "commands/auth-choice-apply-volcengine.json",
+      "commands/auth-choice-apply-byteplus.json",
+      "commands/commands-registry-data.json",
+      "commands/commands-session.json",
+      "commands/commands-models.json",
+      "commands/commands-subagents-main.json",
+      "commands/commands-subagents-shared.json",
+      "commands/commands-subagents-focus.json",
+      "commands/commands-subagents-unfocus.json",
+      "commands/commands-subagents-info.json",
+      "commands/commands-subagents-log.json",
+      "commands/commands-subagents-spawn.json",
+      "commands/commands-subagents-send.json",
+      "commands/commands-subagents-kill.json"
     ],
     "daemon": [
       "daemon/systemd-hints.json",
@@ -91,7 +107,8 @@
       "dashboard/config-form-shared.json",
       "dashboard/agents.json",
       "dashboard/usage.json",
-      "dashboard/skills-shared.json"
+      "dashboard/skills-shared.json",
+      "dashboard/chat-fallback.json"
     ],
     "extensions": [
       "extensions/feishu.json",

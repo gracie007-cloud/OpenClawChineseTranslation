@@ -11,6 +11,10 @@
     "Anyone can DM it.": "任何人都可以向它发私信。",
     "unknown senders will be blocked": "未知发送者将被阻止",
     "No channel security warnings detected.": "未检测到频道安全警告。",
-    "note(lines.join(\"\\n\"), \"Security\")": "note(lines.join(\"\\n\"), \"安全\")"
+    "note(lines.join(\"\\n\"), \"Security\")": "note(lines.join(\"\\n\"), \"安全\")",
+    "\"- Note: approvals.exec.enabled=false disables approval forwarding only.\"": "\"- 注意: approvals.exec.enabled=false 仅禁用审批转发。\"",
+    "\"  Host exec gating still comes from ~/.openclaw/exec-approvals.json.\"": "\"  主机执行控制仍来自 ~/.openclaw/exec-approvals.json。\"",
+    "\"  Safer remote access: keep bind loopback and use Tailscale Serve/Funnel or an SSH tunnel.\"": "\"  更安全的远程访问方式: 保持绑定回环地址，使用 Tailscale Serve/Funnel 或 SSH 隧道。\"",
+    "\"  Example tunnel: ssh -N -L 18789:127.0.0.1:18789 user@gateway-host\"": "\"  隧道示例: ssh -N -L 18789:127.0.0.1:18789 user@gateway-host\""
   }
 }
