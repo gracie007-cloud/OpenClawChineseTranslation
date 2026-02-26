@@ -15,19 +15,23 @@
 
 ---
 
+<a id="toc"></a>
+
 ## 目录
 
-- [环境准备](#环境准备)
-- [项目结构](#项目结构)
-- [汉化 CLI 工具](#汉化-cli-工具)
-- [手动汉化安装](#手动汉化安装)
-- [添加新翻译](#添加新翻译)
-- [翻译规范](#翻译规范)
-- [提交 PR](#提交-pr)
-- [行为准则](#行为准则)
-- [联系我们](#联系我们)
+- [环境准备](#setup)
+- [项目结构](#structure)
+- [汉化 CLI 工具](#cli-tool)
+- [手动汉化安装](#manual-install)
+- [添加新翻译](#add-translation)
+- [翻译规范](#translation-rules)
+- [提交 PR](#submit-pr)
+- [行为准则](#code-of-conduct)
+- [联系我们](#contact)
 
 ---
+
+<a id="setup"></a>
 
 ## 环境准备
 
@@ -43,6 +47,8 @@ git clone https://github.com/openclaw/openclaw.git openclaw
 <p align="right"><a href="#top">回到顶部</a></p>
 
 ---
+
+<a id="structure"></a>
 
 ## 项目结构
 
@@ -99,6 +105,8 @@ OpenClawChineseTranslation/
 
 ---
 
+<a id="cli-tool"></a>
+
 ## 汉化 CLI 工具
 
 | 命令 | 说明 |
@@ -114,6 +122,8 @@ OpenClawChineseTranslation/
 <p align="right"><a href="#top">回到顶部</a></p>
 
 ---
+
+<a id="manual-install"></a>
 
 ## 手动汉化安装
 
@@ -153,11 +163,17 @@ openclaw --help
 
 ---
 
+<a id="add-translation"></a>
+
 ## 添加新翻译
+
+<a id="find-target"></a>
 
 ### 1. 找到目标文件
 
 确定需要翻译的源文件位置（在 `openclaw/` 目录中）。
+
+<a id="create-rule"></a>
 
 ### 2. 创建翻译规则
 
@@ -179,9 +195,13 @@ openclaw --help
 - `description`: 此翻译配置的说明
 - `replacements`: 键值对，键为原始英文，值为翻译后的中文
 
+<a id="register-file"></a>
+
 ### 3. 注册翻译文件
 
 在 `translations/config.json` 中添加新文件的路径。
+
+<a id="test"></a>
 
 ### 4. 测试
 
@@ -196,6 +216,8 @@ npm run cli -- apply
 npm run cli -- verify
 ```
 
+<a id="custom-notes"></a>
+
 ### 5. 自定义翻译注意事项
 
 - 替换键必须在源文件中**唯一匹配**，否则可能导致误替换
@@ -207,9 +229,13 @@ npm run cli -- verify
 
 ---
 
+<a id="translation-rules"></a>
+
 ## 翻译规范
 
 详见 [TRANSLATION_GUIDE.md](TRANSLATION_GUIDE.md)
+
+<a id="core-principles"></a>
 
 ### 核心原则
 
@@ -218,6 +244,8 @@ npm run cli -- verify
 3. **保持格式** - 不改变占位符、换行、空格
 4. **简洁准确** - 避免冗长，符合中文习惯
 5. **先长后短** - 较长的匹配串应排在较短的前面，避免部分匹配
+
+<a id="terminology"></a>
 
 ### 常用术语对照
 
@@ -238,6 +266,8 @@ npm run cli -- verify
 
 ---
 
+<a id="submit-pr"></a>
+
 ## 提交 PR
 
 1. Fork 本项目
@@ -251,6 +281,8 @@ npm run cli -- verify
 
 ---
 
+<a id="code-of-conduct"></a>
+
 ## 行为准则
 
 - 尊重他人
@@ -260,6 +292,8 @@ npm run cli -- verify
 <p align="right"><a href="#top">回到顶部</a></p>
 
 ---
+
+<a id="contact"></a>
 
 ## 联系我们
 
