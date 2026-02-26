@@ -480,15 +480,17 @@ npm install -g @qingchencloud/openclaw-updater
   &nbsp;&nbsp;
   <a href="https://yb.tencent.com/gp/i/LsvIw7mdR7Lb"><img src="https://img.shields.io/badge/元宝派-加入圈子-FF6A00?style=for-the-badge&logo=tencent-qq&logoColor=white" alt="元宝派"></a>
   &nbsp;&nbsp;
-  <a href="https://qm.qq.com/q/qUfdR0jJVS"><img src="https://img.shields.io/badge/QQ群-244979483-12B7F5?style=for-the-badge&logo=tencent-qq&logoColor=white" alt="QQ群"></a>
+  <a href="https://qt.cool/c/OpenClaw"><img src="https://img.shields.io/badge/QQ群-加入交流-12B7F5?style=for-the-badge&logo=tencent-qq&logoColor=white" alt="QQ群"></a>
 </p>
 
-### QQ 交流群（2000 人大群）
+### QQ 交流群
 
 <p align="center">
-  <img src="docs/image/qq_01.jpg" alt="QQ交流群" width="200px">
+  <a href="https://qt.cool/c/OpenClaw">
+    <img src="docs/image/OpenClaw-QQ.png" alt="QQ交流群" width="200px">
+  </a>
   <br>
-  <em>QQ 群号：244979483 | 扫码加入，交流 OpenClaw 使用心得</em>
+  <em>扫码或 <a href="https://qt.cool/c/OpenClaw">点击链接</a> 加入 | 2000 人大群，满员自动切换</em>
 </p>
 
 ### 微信交流群
