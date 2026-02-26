@@ -1,13 +1,26 @@
+<a id="top"></a>
+
 # 翻译规范
 
 <p align="center">
-  <a href="../README.md">🏠 首页</a> ·
-  <a href="INSTALL_GUIDE.md">📦 安装指南</a> ·
-  <a href="DOCKER_GUIDE.md">🐳 Docker 部署</a> ·
-  <a href="FAQ.md">❓ 常见问题</a> ·
-  <a href="CONTRIBUTING.md">🤝 贡献指南</a> ·
-  <b>📝 翻译规范</b>
+  <a href="../README.md">首页</a> ·
+  <a href="INSTALL_GUIDE.md">安装指南</a> ·
+  <a href="DOCKER_GUIDE.md">Docker 部署</a> ·
+  <a href="FAQ.md">常见问题</a> ·
+  <a href="CONTRIBUTING.md">贡献指南</a> ·
+  <b>翻译规范</b>
 </p>
+
+---
+
+## 目录
+
+- [术语表](#术语表)
+- [翻译原则](#翻译原则)
+- [风格指南](#风格指南)
+- [常见问题](#常见问题)
+
+---
 
 ## 术语表
 
@@ -26,6 +39,10 @@
 | Session | 会话 |
 | Config | 配置 |
 | Sandbox | 沙箱 |
+
+<p align="right"><a href="#top">回到顶部</a></p>
+
+---
 
 ## 翻译原则
 
@@ -67,6 +84,10 @@
 "run `openclaw doctor`": "运行 `开爪医生`"
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
+---
+
 ## 风格指南
 
 ### 标点符号
@@ -86,6 +107,10 @@
 - 尽量保持与原文相近的长度
 - UI 文本尤其注意不要过长
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
+---
+
 ## 常见问题
 
 ### Q: 找不到要翻译的字符串？
@@ -101,3 +126,5 @@ A: 检查：
 1. JSON 格式是否正确
 2. 转义字符是否正确（`\"` 表示引号）
 3. 原文是否精确匹配源码
+
+<p align="right"><a href="#top">回到顶部</a></p>

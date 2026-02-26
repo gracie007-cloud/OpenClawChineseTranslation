@@ -1,3 +1,5 @@
+<a id="top"></a>
+
 # OpenClaw 汉化发行版
 
 [![Release](https://img.shields.io/github/v/release/1186258278/OpenClawChineseTranslation?label=稳定版)](https://github.com/1186258278/OpenClawChineseTranslation/releases)
@@ -12,14 +14,33 @@
   <a href="https://openclaw.qt.cool/"><img src="https://img.shields.io/badge/🔥_汉化官网-openclaw.qt.cool-dc2626?style=for-the-badge" alt="汉化官网"></a>
 </p>
 
-<p align="center">
-  <b>🏠 首页</b> ·
-  <a href="docs/INSTALL_GUIDE.md">📦 安装指南</a> ·
-  <a href="docs/DOCKER_GUIDE.md">🐳 Docker 部署</a> ·
-  <a href="docs/FAQ.md">❓ 常见问题</a> ·
-  <a href="docs/CONTRIBUTING.md">🤝 贡献指南</a> ·
-  <a href="docs/TRANSLATION_GUIDE.md">📝 翻译规范</a>
-</p>
+## 目录
+
+- [什么是 OpenClaw？](#什么是-openclaw)
+- [合作伙伴](#合作伙伴)
+- [4 步上手](#4-步上手)
+- [汉化效果预览](#汉化效果预览)
+- [常用命令](#常用命令)
+- [网关重启](#网关重启)
+- [卸载教程](#卸载教程)
+- [更新升级](#更新升级)
+- [Docker 部署](#docker-部署国内推荐)
+- [其他安装方式](#其他安装方式)
+- [手机端 ClawApp](#手机端--clawapp)
+- [常见问题](#常见问题)
+- [插件扩展](#插件扩展)
+- [社区交流](#社区交流)
+- [相关链接](#相关链接)
+- [参与贡献](#参与贡献)
+- [关于](#关于)
+
+**子文档导航：**
+
+- **[安装指南](docs/INSTALL_GUIDE.md)** — [前提条件](docs/INSTALL_GUIDE.md#前提条件) · [安装](docs/INSTALL_GUIDE.md#第一阶段安装) · [初始化配置](docs/INSTALL_GUIDE.md#第二阶段初始化配置) · [验证运行](docs/INSTALL_GUIDE.md#第三阶段验证运行) · [进阶配置](docs/INSTALL_GUIDE.md#第四阶段进阶配置可选) · [模型配置](docs/INSTALL_GUIDE.md#模型配置指南) · [守护进程](docs/INSTALL_GUIDE.md#守护进程管理)
+- **[Docker 部署指南](docs/DOCKER_GUIDE.md)** — [一键部署](docs/DOCKER_GUIDE.md#一键部署脚本推荐) · [本地启动](docs/DOCKER_GUIDE.md#本地快速启动) · [远程部署](docs/DOCKER_GUIDE.md#服务器远程部署) · [Token 认证](docs/DOCKER_GUIDE.md#远程访问与-token-认证) · [Nginx 反代](docs/DOCKER_GUIDE.md#nginx--https-反向代理) · [Docker Compose](docs/DOCKER_GUIDE.md#docker-compose) · [错误排查](docs/DOCKER_GUIDE.md#常见错误排查)
+- **[常见问题](docs/FAQ.md)** — [安装问题](docs/FAQ.md#一安装问题) · [启动问题](docs/FAQ.md#二启动问题) · [Dashboard 连不上](docs/FAQ.md#三dashboard-连不上) · [内网/远程访问](docs/FAQ.md#四内网--远程访问) · [模型和对话](docs/FAQ.md#五模型和对话) · [其他问题](docs/FAQ.md#六其他问题)
+- **[贡献指南](docs/CONTRIBUTING.md)** — [环境准备](docs/CONTRIBUTING.md#环境准备) · [项目结构](docs/CONTRIBUTING.md#项目结构) · [添加新翻译](docs/CONTRIBUTING.md#添加新翻译) · [提交 PR](docs/CONTRIBUTING.md#提交-pr)
+- **[翻译规范](docs/TRANSLATION_GUIDE.md)** — [术语表](docs/TRANSLATION_GUIDE.md#术语表) · [翻译原则](docs/TRANSLATION_GUIDE.md#翻译原则) · [风格指南](docs/TRANSLATION_GUIDE.md#风格指南)
 
 ---
 
@@ -29,9 +50,11 @@
 
 **本项目 = OpenClaw + 全中文界面**，CLI 命令行和 Dashboard 网页控制台均已深度汉化。
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
-## 🏷️ 合作伙伴
+## 合作伙伴
 
 **胜算云** - 国内 AI API 聚合平台，新用户注册送额度，充值尊享 7 折优惠！
 
@@ -42,6 +65,8 @@
 | 大神礼 | ≥500元 | 50元 模力券 + Kimi K2.5 七折卡(7天) |
 
 [查看活动 →](https://www.shengsuanyun.com/activity/4184b48a6be4443cbe13e86e091e43b4?from=CH_4BVI0BM2) · [注册账号 →](https://www.shengsuanyun.com/?from=CH_4BVI0BM2)
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -80,6 +105,8 @@ openclaw dashboard
 浏览器会自动打开全中文的 Dashboard 控制台。完成！
 
 > 想了解每一步的详细说明？查看 **[详细安装指南](docs/INSTALL_GUIDE.md)**（包含 Node.js 安装、模型配置、守护进程、内网访问等）
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -126,6 +153,8 @@ openclaw dashboard
 
 </details>
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 常用命令
@@ -155,6 +184,8 @@ openclaw doctor             # 诊断问题（自动修复）
 
 > **Dashboard 语言设置**：首次打开网页控制台后，前往 **Overview** 页面底部，将 **Language** 切换为 **简体中文 (Simplified Chinese)**，即可显示中文界面。设置后刷新页面生效。
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 网关重启
@@ -176,6 +207,8 @@ openclaw daemon status     # 查看状态
 # Docker 容器重启
 docker restart openclaw
 ```
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -216,7 +249,7 @@ sudo rm /etc/systemd/system/openclaw.service
 sudo systemctl daemon-reload
 ```
 
----
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -232,6 +265,8 @@ npm update -g @qingchencloud/openclaw-zh
 |------|----------|------|
 | **稳定版** | `npm install -g @qingchencloud/openclaw-zh@latest` | 经过测试，推荐使用 |
 | **最新版** | `npm install -g @qingchencloud/openclaw-zh@nightly` | 每小时同步上游，体验新功能 |
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -289,6 +324,8 @@ docker run -d --name openclaw -p 18789:18789 \
 访问：`http://localhost:18789`
 
 > 完整指南（远程部署、Nginx 反代、Docker Compose、内网访问等）请查看 **[Docker 部署指南](docs/DOCKER_GUIDE.md)**
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -352,9 +389,11 @@ npx @qingchencloud/openclaw-zh@latest
 
 </details>
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
-## 📱 手机端 — ClawApp
+## 手机端 — ClawApp
 
 > **想用手机和 AI 智能体聊天？** [ClawApp](https://github.com/qingchencloud/clawapp) 是 OpenClaw 的移动端 H5 聊天客户端，打开浏览器就能用，不需要装 App。
 
@@ -387,11 +426,13 @@ docker compose up -d --build
 
 > 详细文档（外网访问、Cloudflare Tunnel、Nginx 反代等）请查看 **[ClawApp 项目主页](https://github.com/qingchencloud/clawapp)** | **[产品官网](https://clawapp.qt.cool/)**
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 常见问题
 
-### 🔥 Top 3 高频问题
+### Top 3 高频问题
 
 <details open>
 <summary><b>❶ 安装卡住 / 下载慢</b></summary>
@@ -469,6 +510,8 @@ docker run --rm -v openclaw-data:/root/.openclaw \
 
 > **[完整排查手册 (25+ 个问题)](docs/FAQ.md)** | **[Docker 问题排查](docs/DOCKER_GUIDE.md#常见错误排查)**
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 插件扩展
@@ -479,6 +522,8 @@ npm install -g @qingchencloud/openclaw-updater
 ```
 
 访问 [插件市场](https://openclaw.qt.cool/) 获取更多插件。
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -510,6 +555,8 @@ npm install -g @qingchencloud/openclaw-updater
   <em>扫码加入7群 | 碰到问题也可以直接在群内反馈</em>
 </p>
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 相关链接
@@ -522,11 +569,15 @@ npm install -g @qingchencloud/openclaw-updater
 | [GitHub Pages](https://1186258278.github.io/OpenClawChineseTranslation/) | [Discord 社区](https://discord.gg/U9AttmsNHh) |
 | [📱 ClawApp 手机端](https://github.com/qingchencloud/clawapp) | [ClawApp 产品官网](https://clawapp.qt.cool/) |
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 参与贡献
 
 - [报告问题](https://github.com/1186258278/OpenClawChineseTranslation/issues) | [改进翻译](docs/CONTRIBUTING.md) | [翻译规范](docs/TRANSLATION_GUIDE.md) | 给项目点个 Star
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -536,5 +587,6 @@ npm install -g @qingchencloud/openclaw-updater
 
 © 武汉晴辰天下网络科技有限公司 | [鄂ICP备2025164966号](https://beian.miit.gov.cn/)
 
+<p align="right"><a href="#top">回到顶部</a></p>
 
 <!-- AI Translation Tools: Claude, Copilot, Codex, Devin, Amazon Q, CodeRabbit -->

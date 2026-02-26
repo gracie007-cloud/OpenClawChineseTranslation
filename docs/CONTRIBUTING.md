@@ -1,12 +1,14 @@
+<a id="top"></a>
+
 # 贡献指南
 
 <p align="center">
-  <a href="../README.md">🏠 首页</a> ·
-  <a href="INSTALL_GUIDE.md">📦 安装指南</a> ·
-  <a href="DOCKER_GUIDE.md">🐳 Docker 部署</a> ·
-  <a href="FAQ.md">❓ 常见问题</a> ·
-  <b>🤝 贡献指南</b> ·
-  <a href="TRANSLATION_GUIDE.md">📝 翻译规范</a>
+  <a href="../README.md">首页</a> ·
+  <a href="INSTALL_GUIDE.md">安装指南</a> ·
+  <a href="DOCKER_GUIDE.md">Docker 部署</a> ·
+  <a href="FAQ.md">常见问题</a> ·
+  <b>贡献指南</b> ·
+  <a href="TRANSLATION_GUIDE.md">翻译规范</a>
 </p>
 
 感谢你对 **OpenClaw 汉化发行版** 的关注！
@@ -22,6 +24,8 @@
 - [添加新翻译](#添加新翻译)
 - [翻译规范](#翻译规范)
 - [提交 PR](#提交-pr)
+- [行为准则](#行为准则)
+- [联系我们](#联系我们)
 
 ---
 
@@ -35,6 +39,8 @@ cd OpenClawChineseTranslation
 # 2. 克隆上游 OpenClaw 源码
 git clone https://github.com/openclaw/openclaw.git openclaw
 ```
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -89,6 +95,8 @@ OpenClawChineseTranslation/
 └── docker-deploy.ps1       # Docker 一键部署 (Windows)
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 汉化 CLI 工具
@@ -102,6 +110,8 @@ OpenClawChineseTranslation/
 | `npm run cli -- apply --target=../openclaw` | 指定目标目录 |
 | `npm run cli -- verify` | 验证汉化结果 |
 | `npm run cli -- restore` | 恢复原版（使用 git checkout） |
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -138,6 +148,8 @@ npm install -g .
 openclaw --version
 openclaw --help
 ```
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -191,6 +203,8 @@ npm run cli -- verify
 - Lit HTML 属性绑定（如 `?disabled=${...}`）不能被翻译
 - 较长的匹配串比短的更安全（避免过于通用的词如 `"default"`）
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 翻译规范
@@ -220,6 +234,8 @@ npm run cli -- verify
 | Node | 节点 |
 | Instance | 实例 |
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 提交 PR
@@ -231,6 +247,8 @@ npm run cli -- verify
 5. 提交更改
 6. 创建 Pull Request
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 行为准则
@@ -238,6 +256,8 @@ npm run cli -- verify
 - 尊重他人
 - 接受建设性批评
 - 专注于改进项目
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -248,3 +268,5 @@ npm run cli -- verify
 - 公司官网: https://qingchencloud.com/
 
 感谢你的贡献！
+
+<p align="right"><a href="#top">回到顶部</a></p>

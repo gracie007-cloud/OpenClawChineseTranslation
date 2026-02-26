@@ -1,12 +1,14 @@
+<a id="top"></a>
+
 # 详细安装指南
 
 <p align="center">
-  <a href="../README.md">🏠 首页</a> ·
-  <b>📦 安装指南</b> ·
-  <a href="DOCKER_GUIDE.md">🐳 Docker 部署</a> ·
-  <a href="FAQ.md">❓ 常见问题</a> ·
-  <a href="CONTRIBUTING.md">🤝 贡献指南</a> ·
-  <a href="TRANSLATION_GUIDE.md">📝 翻译规范</a>
+  <a href="../README.md">首页</a> ·
+  <b>安装指南</b> ·
+  <a href="DOCKER_GUIDE.md">Docker 部署</a> ·
+  <a href="FAQ.md">常见问题</a> ·
+  <a href="CONTRIBUTING.md">贡献指南</a> ·
+  <a href="TRANSLATION_GUIDE.md">翻译规范</a>
 </p>
 
 从零开始，一步步安装和配置 OpenClaw 汉化版。
@@ -77,6 +79,8 @@ node -v    # 应显示 v22.x.x
 npm -v     # 应显示 10.x.x
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 第一阶段：安装
@@ -110,6 +114,8 @@ openclaw --help
 > # 将输出的路径/bin 加入你的 shell 配置文件（~/.bashrc 或 ~/.zshrc）
 > export PATH="$(npm prefix -g)/bin:$PATH"
 > ```
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -171,6 +177,8 @@ openclaw config set agents.defaults.model anthropic/claude-sonnet-4-20250514
 openclaw config set auth.anthropic.apiKey sk-ant-你的API密钥
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 第三阶段：验证运行
@@ -204,6 +212,8 @@ openclaw status
 # 运行诊断（检查配置是否正确）
 openclaw doctor
 ```
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -250,6 +260,8 @@ openclaw skills list
 # 安装技能
 openclaw skills install
 ```
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -592,6 +604,8 @@ openclaw
 
 更多模型问题排查请参考 [FAQ - 模型和对话](FAQ.md#五模型和对话)
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 配置文件说明
@@ -623,6 +637,8 @@ openclaw config get agents.defaults.model
 openclaw config set gateway.mode local
 openclaw config set gateway.port 18789
 ```
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -657,6 +673,8 @@ openclaw gateway status
 sudo loginctl enable-linger $USER
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 常用命令速查
@@ -678,6 +696,8 @@ sudo loginctl enable-linger $USER
 | `openclaw skills list` | 查看技能列表 |
 | `openclaw --help` | 查看帮助 |
 | `openclaw --version` | 查看版本 |
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 

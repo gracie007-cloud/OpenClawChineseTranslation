@@ -1,12 +1,14 @@
+<a id="top"></a>
+
 # 常见问题排查手册
 
 <p align="center">
-  <a href="../README.md">🏠 首页</a> ·
-  <a href="INSTALL_GUIDE.md">📦 安装指南</a> ·
-  <a href="DOCKER_GUIDE.md">🐳 Docker 部署</a> ·
-  <b>❓ 常见问题</b> ·
-  <a href="CONTRIBUTING.md">🤝 贡献指南</a> ·
-  <a href="TRANSLATION_GUIDE.md">📝 翻译规范</a>
+  <a href="../README.md">首页</a> ·
+  <a href="INSTALL_GUIDE.md">安装指南</a> ·
+  <a href="DOCKER_GUIDE.md">Docker 部署</a> ·
+  <b>常见问题</b> ·
+  <a href="CONTRIBUTING.md">贡献指南</a> ·
+  <a href="TRANSLATION_GUIDE.md">翻译规范</a>
 </p>
 
 遇到问题？按错误消息搜索本页，或按场景分类查找解决方案。
@@ -15,7 +17,7 @@
 
 ## 目录
 
-- [零、紧急修复](#零紧急修复) ⚠️
+- [零、紧急修复](#零紧急修复)
 - [一、安装问题](#一安装问题)
 - [二、启动问题](#二启动问题)
 - [三、Dashboard 连不上](#三dashboard-连不上)
@@ -189,6 +191,8 @@ npm install -g @qingchencloud/openclaw-zh@latest
 openclaw --version
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 二、启动问题
@@ -328,6 +332,8 @@ openclaw onboard --install-daemon
 # Docker 环境：重启容器
 docker restart openclaw
 ```
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -486,6 +492,8 @@ docker restart openclaw
 export OPENCLAW_GATEWAY_TOKEN=你的密码
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 四、内网 / 远程访问
@@ -563,6 +571,8 @@ docker restart openclaw
 
 只有在不设 Token 的情况下，浏览器才会因为安全策略（Web Crypto API 需要 HTTPS）阻止连接。
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 五、模型和对话
@@ -630,6 +640,8 @@ openclaw config set auth.openai.apiKey sk-your-api-key
 - Claude、GPT-4 等主流模型都支持中文对话
 - 你可以在系统提示中设置"请用中文回复"
 - 本项目只汉化界面（CLI + Dashboard），不影响对话内容
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -735,6 +747,8 @@ docker pull ghcr.io/1186258278/openclaw-zh:latest
 3. 进入容器终端执行 `openclaw setup` 初始化
 4. 设置 `openclaw config set gateway.mode local`
 5. 重启容器
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
