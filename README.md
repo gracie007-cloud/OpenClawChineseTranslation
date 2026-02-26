@@ -534,6 +534,8 @@ npm install -g @qingchencloud/openclaw-updater
   <a href="https://yb.tencent.com/gp/i/LsvIw7mdR7Lb"><img src="https://img.shields.io/badge/元宝派-加入圈子-FF6A00?style=for-the-badge&logo=tencent-qq&logoColor=white" alt="元宝派"></a>
   &nbsp;&nbsp;
   <a href="https://qt.cool/c/OpenClaw"><img src="https://img.shields.io/badge/QQ群-加入交流-12B7F5?style=for-the-badge&logo=tencent-qq&logoColor=white" alt="QQ群"></a>
+  &nbsp;&nbsp;
+  <a href="https://qt.cool/c/OpenClawWx"><img src="https://img.shields.io/badge/微信群-加入交流-07C160?style=for-the-badge&logo=wechat&logoColor=white" alt="微信群"></a>
 </p>
 
 ### QQ 交流群
@@ -549,9 +551,11 @@ npm install -g @qingchencloud/openclaw-updater
 ### 微信交流群
 
 <p align="center">
-  <img src="docs/image/wx_07.png" alt="微信交流7群" width="200px">
+  <a href="https://qt.cool/c/OpenClawWx">
+    <img src="docs/image/OpenClawWx.png" alt="微信交流群" width="200px">
+  </a>
   <br>
-  <em>扫码加入7群 | 碰到问题也可以直接在群内反馈</em>
+  <em>扫码或 <a href="https://qt.cool/c/OpenClawWx">点击链接</a> 加入 | 碰到问题也可以直接在群内反馈</em>
 </p>
 
 <p align="right"><a href="#top">回到顶部</a></p>
