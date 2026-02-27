@@ -2,9 +2,6 @@
   "file": "src/commands/auth-choice.apply.byteplus.ts",
   "description": "BytePlus 认证流程翻译",
   "replacements": {
-    "message: \"Enter BytePlus API key\"": "message: \"请输入 BytePlus API 密钥\"",
-    "\"BytePlus API key\"": "\"BytePlus API 密钥\"",
-    "`Copied BYTEPLUS_API_KEY to ${result.path} for launchd compatibility.`": "`已将 BYTEPLUS_API_KEY 复制到 ${result.path}（用于 launchd 兼容）。`",
-    "`Saved BYTEPLUS_API_KEY to ${result.path} for launchd compatibility.`": "`已将 BYTEPLUS_API_KEY 保存到 ${result.path}（用于 launchd 兼容）。`"
+    "promptMessage: \"Enter BytePlus API key\"": "promptMessage: \"请输入 BytePlus API 密钥\""
   }
 }

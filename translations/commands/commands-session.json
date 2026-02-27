@@ -14,7 +14,6 @@
     "\"⚠️ Failed to update session TTL for the current binding.\"": "\"⚠️ 更新当前绑定的会话 TTL 失败。\"",
     "\"⚠️ /restart is disabled (commands.restart=false).\"": "\"⚠️ /restart 已禁用（commands.restart=false）。\"",
     "\"⚙️ Restarting OpenClaw in-process (SIGUSR1); back in a few seconds.\"": "\"⚙️ 正在进程内重启 OpenClaw（SIGUSR1），几秒后恢复。\"",
-    "\"⚙️ Agent was aborted.\"": "\"⚙️ 代理已中止。\"",
     "\"Usage: /session ttl <duration|off> (example: /session ttl 24h)\"": "\"用法：/session ttl <时长|off>（示例：/session ttl 24h）\""
   }
 }

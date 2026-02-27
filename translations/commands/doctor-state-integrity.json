@@ -14,7 +14,7 @@
     "\"Session store dir\"": "\"会话存储目录\"",
     "\"OAuth dir\"": "\"OAuth 目录\"",
     "\"- Multiple state directories detected. This can split session history.\"": "\"- 检测到多个状态目录。这可能导致会话历史分散。\"",
-    "`- ${missing.length}/${recent.length} recent sessions are missing transcripts.`": "`- ${missing.length}/${recent.length} 个最近会话缺少记录文件。`",
+    "`- ${missing.length}/${recentTranscriptCandidates.length} recent sessions are missing transcripts.`": "`- ${missing.length}/${recentTranscriptCandidates.length} 个最近会话缺少记录文件。`",
     "`  Verify sessions in store: ${formatCliCommand(`openclaw sessions --store \"${absoluteStorePath}\"`)}`,": "`  验证存储中的会话: ${formatCliCommand(`openclaw sessions --store \"${absoluteStorePath}\"`)}`,",
     "`  Preview cleanup impact: ${formatCliCommand(`openclaw sessions cleanup --store \"${absoluteStorePath}\" --dry-run`)}`,": "`  预览清理影响: ${formatCliCommand(`openclaw sessions cleanup --store \"${absoluteStorePath}\" --dry-run`)}`,",
     "`- Main session transcript missing (${shortenHomePath(transcriptPath)}). History will appear to reset.`": "`- 主会话记录缺失 (${shortenHomePath(transcriptPath)})。历史记录将显示为已重置。`",
