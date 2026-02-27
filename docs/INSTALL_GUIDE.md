@@ -1,28 +1,38 @@
+<a id="top"></a>
+
 # 详细安装指南
 
-从零开始，一步步安装和配置 OpenClaw 汉化版。
+<p align="center">
+  <a href="../README.md">首页</a> ·
+  <b>安装指南</b> ·
+  <a href="DOCKER_GUIDE.md">Docker 部署</a> ·
+  <a href="FAQ.md">常见问题</a> ·
+  <a href="CONTRIBUTING.md">贡献指南</a> ·
+  <a href="TRANSLATION_GUIDE.md">翻译规范</a>
+</p>
 
-> 返回 [README](../README.md) | [Docker 部署](DOCKER_GUIDE.md) | [常见问题](FAQ.md)
+从零开始，一步步安装和配置 OpenClaw 汉化版。
 
 ---
 
 ## 目录
 
-- [前提条件](#前提条件)
-- [第一阶段：安装](#第一阶段安装)
-- [第二阶段：初始化配置](#第二阶段初始化配置)
-- [第三阶段：验证运行](#第三阶段验证运行)
-- [第四阶段：进阶配置（可选）](#第四阶段进阶配置可选)
-- [模型配置指南](#模型配置指南)
-- [配置文件说明](#配置文件说明)
-- [守护进程管理](#守护进程管理)
-- [常用命令速查](#常用命令速查)
+- [前提条件](#prerequisites)
+- [第一阶段：安装](#phase1-install)
+- [第二阶段：初始化配置](#phase2-config)
+- [第三阶段：验证运行](#phase3-verify)
+- [第四阶段：进阶配置（可选）](#phase4-advanced)
+- [模型配置指南](#model-config)
+- [配置文件说明](#config-files)
+- [守护进程管理](#daemon)
+- [常用命令速查](#commands)
 
 ---
 
+<a id="prerequisites"></a>
 ## 前提条件
 
-### 1. 安装 Node.js
+### <a id="install-nodejs"></a>1. 安装 Node.js
 
 OpenClaw 要求 **Node.js >= 22.12.0**。
 
@@ -63,18 +73,21 @@ nvm install 22
 nvm use 22
 ```
 
-### 2. 验证环境
+### <a id="verify-env"></a>2. 验证环境
 
 ```bash
 node -v    # 应显示 v22.x.x
 npm -v     # 应显示 10.x.x
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="phase1-install"></a>
 ## 第一阶段：安装
 
-### 安装汉化版
+### <a id="install-package"></a>安装汉化版
 
 ```bash
 npm install -g @qingchencloud/openclaw-zh@latest
@@ -85,7 +98,7 @@ npm install -g @qingchencloud/openclaw-zh@latest
 > npm install -g @qingchencloud/openclaw-zh@latest --registry=https://registry.npmmirror.com
 > ```
 
-### 验证安装
+### <a id="verify-install"></a>验证安装
 
 ```bash
 openclaw --version
@@ -104,11 +117,14 @@ openclaw --help
 > export PATH="$(npm prefix -g)/bin:$PATH"
 > ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="phase2-config"></a>
 ## 第二阶段：初始化配置
 
-### 方式 A：交互式向导（推荐新手）
+### <a id="wizard-setup"></a>方式 A：交互式向导（推荐新手）
 
 ```bash
 openclaw onboard
@@ -137,7 +153,7 @@ openclaw onboard
 
 > 向导中大部分选项直接按回车用默认值即可。
 
-### 方式 B：快速非交互式初始化
+### <a id="quick-setup"></a>方式 B：快速非交互式初始化
 
 如果你已经有 API Key，想跳过向导直接配置：
 
@@ -156,7 +172,7 @@ openclaw config set auth.anthropic.apiKey sk-ant-你的API密钥
 openclaw config set gateway.auth.token 你设定的密码
 ```
 
-详细的模型配置请参考下方 [模型配置指南](#模型配置指南)。
+详细的模型配置请参考下方 [模型配置指南](#model-config)。
 
 快速示例（Claude）：
 ```bash
@@ -164,11 +180,14 @@ openclaw config set agents.defaults.model anthropic/claude-sonnet-4-20250514
 openclaw config set auth.anthropic.apiKey sk-ant-你的API密钥
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="phase3-verify"></a>
 ## 第三阶段：验证运行
 
-### 启动网关
+### <a id="start-gateway"></a>启动网关
 
 ```bash
 # 方式1：前台运行（可以看到实时日志，按 Ctrl+C 停止）
@@ -178,7 +197,7 @@ openclaw
 openclaw onboard --install-daemon
 ```
 
-### 打开控制台
+### <a id="open-dashboard"></a>打开控制台
 
 ```bash
 openclaw dashboard
@@ -188,7 +207,7 @@ openclaw dashboard
 
 如果浏览器没有自动打开，手动访问：`http://localhost:18789`
 
-### 检查运行状态
+### <a id="check-status"></a>检查运行状态
 
 ```bash
 # 查看网关状态
@@ -198,11 +217,14 @@ openclaw status
 openclaw doctor
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="phase4-advanced"></a>
 ## 第四阶段：进阶配置（可选）
 
-### 开启内网访问
+### <a id="lan-access"></a>开启内网访问
 
 默认情况下只能在本机通过 `localhost` 访问。如果想让内网其他设备也能访问：
 
@@ -219,7 +241,7 @@ openclaw gateway restart
 
 然后在其他设备上访问 `http://你的IP:18789`，在「网关令牌」输入框填入密码。
 
-### 配置聊天通道
+### <a id="chat-channels"></a>配置聊天通道
 
 ```bash
 # 添加 Telegram
@@ -234,7 +256,7 @@ openclaw channels add whatsapp
 openclaw channels list
 ```
 
-### 安装技能
+### <a id="install-skills"></a>安装技能
 
 ```bash
 # 查看可用技能
@@ -244,17 +266,20 @@ openclaw skills list
 openclaw skills install
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="model-config"></a>
 ## 模型配置指南
 
 OpenClaw 支持几乎所有主流 AI 模型，包括国际服务、国产模型和本地模型。只要是兼容 OpenAI 接口的服务都可以接入。
 
-### 模型名格式
+### <a id="model-name-format"></a>模型名格式
 
 模型名使用 `提供商/模型ID` 格式，例如：`openai/gpt-4o`、`anthropic/claude-sonnet-4-20250514`
 
-### 国际主流模型
+### <a id="international-models"></a>国际主流模型
 
 #### Anthropic Claude（推荐）
 
@@ -300,7 +325,7 @@ openclaw config set auth.openrouter.apiKey sk-or-你的API密钥
 
 ---
 
-### 国产模型
+### <a id="chinese-models"></a>国产模型
 
 #### 月之暗面 Moonshot（Kimi）
 
@@ -381,7 +406,7 @@ openclaw config set auth.venice.apiKey 你的API密钥
 
 ---
 
-### 本地模型
+### <a id="local-models"></a>本地模型
 
 #### Ollama（推荐）
 
@@ -419,7 +444,7 @@ openclaw config set auth.openai.baseURL http://localhost:1234/v1
 
 ---
 
-### 自定义 OpenAI 兼容接口
+### <a id="custom-openai"></a>自定义 OpenAI 兼容接口
 
 适用于：OneAPI、New API、各种中转站、企业私有部署、自建代理等。只要接口兼容 OpenAI 格式就能用。
 
@@ -528,7 +553,7 @@ openclaw
 
 ---
 
-### Cloudflare AI Gateway
+### <a id="cloudflare-gateway"></a>Cloudflare AI Gateway
 
 通过 Cloudflare 网关代理调用 AI 模型，可以实现缓存、限速、监控等功能：
 
@@ -542,7 +567,7 @@ openclaw config set agents.defaults.model cloudflare-ai-gateway/claude-sonnet-4-
 
 ---
 
-### 配置后备模型
+### <a id="fallback-models"></a>配置后备模型
 
 设置多个模型作为后备，主模型不可用时自动切换：
 
@@ -565,7 +590,7 @@ openclaw config set agents.defaults.model cloudflare-ai-gateway/claude-sonnet-4-
 
 ---
 
-### 模型配置排查
+### <a id="model-troubleshoot"></a>模型配置排查
 
 如果模型调用没有响应：
 
@@ -583,10 +608,13 @@ openclaw doctor
 openclaw
 ```
 
-更多模型问题排查请参考 [FAQ - 模型和对话](FAQ.md#五模型和对话)
+更多模型问题排查请参考 [FAQ - 模型和对话](FAQ.md#model-issues)
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
+<a id="config-files"></a>
 ## 配置文件说明
 
 所有配置存储在 `~/.openclaw/` 目录下：
@@ -602,7 +630,7 @@ openclaw
 
 **Windows 路径**：`%USERPROFILE%\.openclaw\`
 
-### 查看和修改配置
+### <a id="edit-config"></a>查看和修改配置
 
 ```bash
 # 查看所有配置
@@ -617,25 +645,28 @@ openclaw config set gateway.mode local
 openclaw config set gateway.port 18789
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="daemon"></a>
 ## 守护进程管理
 
 安装守护进程后，OpenClaw 会在后台自动运行，开机自启。
 
-### 安装守护进程
+### <a id="install-daemon"></a>安装守护进程
 
 ```bash
 openclaw onboard --install-daemon
 ```
 
-### 查看状态
+### <a id="daemon-status"></a>查看状态
 
 ```bash
 openclaw gateway status
 ```
 
-### 管理命令
+### <a id="daemon-commands"></a>管理命令
 
 | 操作 | macOS | Linux |
 |------|-------|-------|
@@ -650,8 +681,11 @@ openclaw gateway status
 sudo loginctl enable-linger $USER
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="commands"></a>
 ## 常用命令速查
 
 | 命令 | 说明 |
@@ -671,6 +705,8 @@ sudo loginctl enable-linger $USER
 | `openclaw skills list` | 查看技能列表 |
 | `openclaw --help` | 查看帮助 |
 | `openclaw --version` | 查看版本 |
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 

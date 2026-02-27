@@ -1,0 +1,7 @@
+{
+  "file": "src/commands/daemon-install-helpers.ts",
+  "description": "网关安装错误提示（Windows PowerShell 提权）",
+  "replacements": {
+    "\"Tip: rerun from an elevated PowerShell (Start → type PowerShell → right-click → Run as administrator) or skip service install.\"": "\"提示：请以管理员身份运行 PowerShell（开始 → 输入 PowerShell → 右键 → 以管理员身份运行），或跳过服务安装。\""
+  }
+}

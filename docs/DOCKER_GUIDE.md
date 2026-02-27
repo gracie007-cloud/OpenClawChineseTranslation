@@ -1,26 +1,39 @@
+<a id="top"></a>
+
 # Docker 部署指南
+
+<p align="center">
+  <a href="../README.md">首页</a> ·
+  <a href="INSTALL_GUIDE.md">安装指南</a> ·
+  <b>Docker 部署</b> ·
+  <a href="FAQ.md">常见问题</a> ·
+  <a href="CONTRIBUTING.md">贡献指南</a> ·
+  <a href="TRANSLATION_GUIDE.md">翻译规范</a>
+</p>
 
 本文档详细介绍如何使用 Docker 部署 OpenClaw 汉化版。
 
-> 返回 [README](../README.md)
-
 ---
 
+<a id="toc"></a>
 ## 目录
 
-- [一键部署脚本（推荐）](#一键部署脚本推荐)
-- [本地快速启动](#本地快速启动)
-- [服务器远程部署](#服务器远程部署)
-- [远程访问与 Token 认证](#远程访问与-token-认证)
-- [Nginx + HTTPS 反向代理](#nginx--https-反向代理)
+- [一键部署脚本（推荐）](#quick-deploy)
+- [镜像地址](#images)
+- [本地快速启动](#local-start)
+- [服务器远程部署](#remote-deploy)
+- [远程访问与 Token 认证](#remote-access)
+- [Nginx + HTTPS 反向代理](#nginx-https)
 - [Docker Compose](#docker-compose)
-- [自行构建镜像](#自行构建镜像)
-- [常用命令](#常用命令)
-- [空间清理](#空间清理)
-- [常见错误排查](#常见错误排查)
+- [自行构建镜像](#build-image)
+- [常用命令](#commands)
+- [空间清理](#cleanup)
+- [常见错误排查](#troubleshoot)
+- [更新 Docker 镜像](#update-image)
 
 ---
 
+<a id="quick-deploy"></a>
 ## 一键部署脚本（推荐）
 
 自动完成初始化、配置远程访问、启动容器：
@@ -33,8 +46,11 @@ curl -fsSL https://cdn.jsdelivr.net/gh/1186258278/OpenClawChineseTranslation@mai
 irm https://cdn.jsdelivr.net/gh/1186258278/OpenClawChineseTranslation@main/docker-deploy.ps1 | iex
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="images"></a>
 ## 镜像地址
 
 | 镜像源 | 地址 | 适用场景 |
@@ -44,8 +60,11 @@ irm https://cdn.jsdelivr.net/gh/1186258278/OpenClawChineseTranslation@main/docke
 
 > 以下命令默认使用 ghcr.io 地址。**国内用户**将 `ghcr.io/1186258278/openclaw-zh` 替换为 `1186258278/openclaw-zh` 即可加速。
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="local-start"></a>
 ## 本地快速启动
 
 适用于在本机运行并通过 `localhost` 访问：
@@ -93,8 +112,11 @@ docker run -d --name openclaw -p 18789:18789 -v openclaw-data:/root/.openclaw --
 
 访问：`http://localhost:18789`
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="remote-deploy"></a>
 ## 服务器远程部署
 
 部署到服务器并从其他设备访问时，需要额外配置：
@@ -159,8 +181,11 @@ docker run -d --name openclaw -p 18789:18789 -v openclaw-data:/root/.openclaw --
 
 访问：`http://服务器IP:18789` → 在 Dashboard 输入 token 连接
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="remote-access"></a>
 ## 远程访问与 Token 认证
 
 通过 HTTP 从非 localhost 访问时，浏览器会阻止设备身份验证（Web Crypto API 需要 secure context）。
@@ -188,6 +213,8 @@ http://服务器IP:18789/overview
 | **SSH 端口转发** | `ssh -L 18789:127.0.0.1:18789 user@server` | 更安全 |
 | **Tailscale Serve** | 自动 HTTPS 访问 | 跨网络访问 |
 | **Nginx + HTTPS** | 配置 SSL 证书反向代理 | 生产环境 |
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -262,6 +289,8 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## Docker Compose
@@ -297,6 +326,8 @@ volumes:
   openclaw-data:
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 自行构建镜像
@@ -320,6 +351,8 @@ docker build -t openclaw-zh:local .
 docker run -d --name openclaw -p 18789:18789 \
   -v openclaw-data:/root/.openclaw openclaw-zh:local
 ```
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -347,6 +380,8 @@ docker exec openclaw openclaw --help
 docker exec openclaw openclaw status
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 空间清理
@@ -373,6 +408,8 @@ docker system prune -a
 docker system prune -a --volumes
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
 ## 常见错误排查
@@ -388,6 +425,8 @@ docker system prune -a --volumes
 | 容器启动后立即退出 | 缺少必要配置 | `docker logs openclaw` 查看日志 |
 | `EACCES: permission denied` | 数据卷权限问题 | 确保使用 named volume 而非 bind mount |
 | Docker 拉取镜像提示 denied | 登录缓存问题 | `docker logout ghcr.io` 后重试 |
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 
@@ -412,5 +451,9 @@ docker run -d --name openclaw -p 18789:18789 \
   $IMAGE \
   openclaw gateway run
 ```
+
+<p align="right"><a href="#top">回到顶部</a></p>
+
+---
 
 > 返回 [README](../README.md)

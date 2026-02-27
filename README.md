@@ -1,3 +1,5 @@
+<a id="top"></a>
+
 # OpenClaw 汉化发行版
 
 [![Release](https://img.shields.io/github/v/release/1186258278/OpenClawChineseTranslation?label=稳定版)](https://github.com/1186258278/OpenClawChineseTranslation/releases)
@@ -12,7 +14,38 @@
   <a href="https://openclaw.qt.cool/"><img src="https://img.shields.io/badge/🔥_汉化官网-openclaw.qt.cool-dc2626?style=for-the-badge" alt="汉化官网"></a>
 </p>
 
+<a id="toc"></a>
+
+## 目录
+
+[什么是 OpenClaw？](#what-is-openclaw) ·
+[4 步上手](#quickstart) ·
+[汉化效果预览](#preview) ·
+[常用命令](#commands) ·
+[网关重启](#gateway-restart) ·
+[卸载教程](#uninstall) ·
+[更新升级](#upgrade) ·
+[Docker 部署](#docker) ·
+[其他安装方式](#other-install) ·
+[手机端 ClawApp](#mobile) ·
+[常见问题](#faq) ·
+[插件扩展](#plugins) ·
+[社区交流](#community) ·
+[相关链接](#links) ·
+[参与贡献](#contributing) ·
+[关于](#about)
+
+**子文档导航：**
+
+- **[安装指南](docs/INSTALL_GUIDE.md)** — [前提条件](docs/INSTALL_GUIDE.md#prerequisites) · [安装](docs/INSTALL_GUIDE.md#phase1-install) · [初始化配置](docs/INSTALL_GUIDE.md#phase2-config) · [验证运行](docs/INSTALL_GUIDE.md#phase3-verify) · [进阶配置](docs/INSTALL_GUIDE.md#phase4-advanced) · [模型配置](docs/INSTALL_GUIDE.md#model-config) · [守护进程](docs/INSTALL_GUIDE.md#daemon)
+- **[Docker 部署指南](docs/DOCKER_GUIDE.md)** — [一键部署](docs/DOCKER_GUIDE.md#quick-deploy) · [本地启动](docs/DOCKER_GUIDE.md#local-start) · [远程部署](docs/DOCKER_GUIDE.md#remote-deploy) · [Token 认证](docs/DOCKER_GUIDE.md#remote-access) · [Nginx 反代](docs/DOCKER_GUIDE.md#nginx-https) · [Docker Compose](docs/DOCKER_GUIDE.md#docker-compose) · [错误排查](docs/DOCKER_GUIDE.md#troubleshoot)
+- **[常见问题](docs/FAQ.md)** — [安装问题](docs/FAQ.md#install-issues) · [启动问题](docs/FAQ.md#startup-issues) · [Dashboard 连不上](docs/FAQ.md#dashboard-issues) · [内网/远程访问](docs/FAQ.md#network-issues) · [模型和对话](docs/FAQ.md#model-issues) · [其他问题](docs/FAQ.md#other-issues)
+- **[贡献指南](docs/CONTRIBUTING.md)** — [环境准备](docs/CONTRIBUTING.md#setup) · [项目结构](docs/CONTRIBUTING.md#structure) · [添加新翻译](docs/CONTRIBUTING.md#add-translation) · [提交 PR](docs/CONTRIBUTING.md#submit-pr)
+- **[翻译规范](docs/TRANSLATION_GUIDE.md)** — [术语表](docs/TRANSLATION_GUIDE.md#glossary) · [翻译原则](docs/TRANSLATION_GUIDE.md#principles) · [风格指南](docs/TRANSLATION_GUIDE.md#style-guide)
+
 ---
+
+<a id="what-is-openclaw"></a>
 
 ## 什么是 OpenClaw？
 
@@ -20,9 +53,13 @@
 
 **本项目 = OpenClaw + 全中文界面**，CLI 命令行和 Dashboard 网页控制台均已深度汉化。
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
-## 🏷️ 合作伙伴
+<a id="partners"></a>
+
+## 合作伙伴
 
 **胜算云** - 国内 AI API 聚合平台，新用户注册送额度，充值尊享 7 折优惠！
 
@@ -34,7 +71,11 @@
 
 [查看活动 →](https://www.shengsuanyun.com/activity/4184b48a6be4443cbe13e86e091e43b4?from=CH_4BVI0BM2) · [注册账号 →](https://www.shengsuanyun.com/?from=CH_4BVI0BM2)
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="quickstart"></a>
 
 ## 4 步上手
 
@@ -72,7 +113,11 @@ openclaw dashboard
 
 > 想了解每一步的详细说明？查看 **[详细安装指南](docs/INSTALL_GUIDE.md)**（包含 Node.js 安装、模型配置、守护进程、内网访问等）
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="preview"></a>
 
 ## 汉化效果预览
 
@@ -117,7 +162,11 @@ openclaw dashboard
 
 </details>
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="commands"></a>
 
 ## 常用命令
 
@@ -146,7 +195,11 @@ openclaw doctor             # 诊断问题（自动修复）
 
 > **Dashboard 语言设置**：首次打开网页控制台后，前往 **Overview** 页面底部，将 **Language** 切换为 **简体中文 (Simplified Chinese)**，即可显示中文界面。设置后刷新页面生效。
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="gateway-restart"></a>
 
 ## 网关重启
 
@@ -168,7 +221,11 @@ openclaw daemon status     # 查看状态
 docker restart openclaw
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="uninstall"></a>
 
 ## 卸载教程
 
@@ -207,9 +264,11 @@ sudo rm /etc/systemd/system/openclaw.service
 sudo systemctl daemon-reload
 ```
 
----
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
+
+<a id="upgrade"></a>
 
 ## 更新升级
 
@@ -224,7 +283,11 @@ npm update -g @qingchencloud/openclaw-zh
 | **稳定版** | `npm install -g @qingchencloud/openclaw-zh@latest` | 经过测试，推荐使用 |
 | **最新版** | `npm install -g @qingchencloud/openclaw-zh@nightly` | 每小时同步上游，体验新功能 |
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="docker"></a>
 
 ## Docker 部署（国内推荐）
 
@@ -281,7 +344,11 @@ docker run -d --name openclaw -p 18789:18789 \
 
 > 完整指南（远程部署、Nginx 反代、Docker Compose、内网访问等）请查看 **[Docker 部署指南](docs/DOCKER_GUIDE.md)**
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="other-install"></a>
 
 ## 其他安装方式
 
@@ -343,9 +410,13 @@ npx @qingchencloud/openclaw-zh@latest
 
 </details>
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
-## 📱 手机端 — ClawApp
+<a id="mobile"></a>
+
+## 手机端 — ClawApp
 
 > **想用手机和 AI 智能体聊天？** [ClawApp](https://github.com/qingchencloud/clawapp) 是 OpenClaw 的移动端 H5 聊天客户端，打开浏览器就能用，不需要装 App。
 
@@ -378,11 +449,15 @@ docker compose up -d --build
 
 > 详细文档（外网访问、Cloudflare Tunnel、Nginx 反代等）请查看 **[ClawApp 项目主页](https://github.com/qingchencloud/clawapp)** | **[产品官网](https://clawapp.qt.cool/)**
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="faq"></a>
 
 ## 常见问题
 
-### 🔥 Top 3 高频问题
+### Top 3 高频问题
 
 <details open>
 <summary><b>❶ 安装卡住 / 下载慢</b></summary>
@@ -398,7 +473,7 @@ npm install -g @qingchencloud/openclaw-zh@latest --registry=https://registry.npm
 docker pull 1186258278/openclaw-zh:latest
 ```
 
-> [详细说明 →](docs/FAQ.md#安装卡住不动--下载很慢)
+> [详细说明 →](docs/FAQ.md#install-slow)
 
 </details>
 
@@ -415,7 +490,7 @@ npm install -g @qingchencloud/openclaw-zh@latest
 
 验证：`openclaw --version` 输出应包含 `-zh` 后缀。
 
-> [详细说明 →](docs/FAQ.md#安装后运行还是英文)
+> [详细说明 →](docs/FAQ.md#still-english)
 
 </details>
 
@@ -441,7 +516,7 @@ docker run --rm -v openclaw-data:/root/.openclaw \
 # 然后重启容器
 ```
 
-> [token mismatch 详细说明 →](docs/FAQ.md#gateway-token-mismatch--unauthorized) | [pairing required 详细说明 →](docs/FAQ.md#pairing-required--设备配对)
+> [token mismatch 详细说明 →](docs/FAQ.md#token-mismatch) | [pairing required 详细说明 →](docs/FAQ.md#pairing-required)
 
 </details>
 
@@ -449,18 +524,22 @@ docker run --rm -v openclaw-data:/root/.openclaw \
 
 | 问题 | 快速解决 | 详情 |
 |------|----------|------|
-| **安装报 `Permission denied (publickey)`** | `git config --global url."https://github.com/".insteadOf ssh://git@github.com/` | [查看 →](docs/FAQ.md#安装报错-permission-denied-publickey--git-error-code-128) |
-| **远程 / 内网访问不了** | `openclaw config set gateway.bind lan` 然后重启 | [查看 →](docs/FAQ.md#npm-安装后内网其他电脑无法访问) |
+| **安装报 `Permission denied (publickey)`** | `git config --global url."https://github.com/".insteadOf ssh://git@github.com/` | [查看 →](docs/FAQ.md#permission-denied) |
+| **远程 / 内网访问不了** | `openclaw config set gateway.bind lan` 然后重启 | [查看 →](docs/FAQ.md#lan-access) |
 | **镜像源版本落后** | 去掉 `--registry` 参数直接安装，或等待镜像同步（已自动触发） | [#32](https://github.com/1186258278/OpenClawChineseTranslation/issues/32) |
-| **`Missing config`** | 运行 `openclaw onboard` 初始化配置 | [查看 →](docs/FAQ.md#missing-config-run-openclaw-setup) |
+| **`Missing config`** | 运行 `openclaw onboard` 初始化配置 | [查看 →](docs/FAQ.md#missing-config) |
 | **`Missing workspace template`** | 升级到最新版即可：`npm install -g @qingchencloud/openclaw-zh@latest` | [查看 →](docs/FAQ.md#missing-workspace-template-agentsmd) |
-| **Ollama 无响应** | 检查 baseURL 是否为 `http://localhost:11434/v1` | [查看 →](docs/FAQ.md#本地-ollama-模型调用无响应) |
-| **Docker 容器启动后退出** | 确保启动命令包含 `openclaw gateway run` | [查看 →](docs/DOCKER_GUIDE.md#常见错误排查) |
-| **Docker 打不开 Dashboard** | 设置 `gateway.bind lan` 监听所有网卡 | [查看 →](docs/DOCKER_GUIDE.md#常见错误排查) |
+| **Ollama 无响应** | 检查 baseURL 是否为 `http://localhost:11434/v1` | [查看 →](docs/FAQ.md#ollama-no-response) |
+| **Docker 容器启动后退出** | 确保启动命令包含 `openclaw gateway run` | [查看 →](docs/DOCKER_GUIDE.md#troubleshoot) |
+| **Docker 打不开 Dashboard** | 设置 `gateway.bind lan` 监听所有网卡 | [查看 →](docs/DOCKER_GUIDE.md#troubleshoot) |
 
-> **[完整排查手册 (25+ 个问题)](docs/FAQ.md)** | **[Docker 问题排查](docs/DOCKER_GUIDE.md#常见错误排查)**
+> **[完整排查手册 (25+ 个问题)](docs/FAQ.md)** | **[Docker 问题排查](docs/DOCKER_GUIDE.md#troubleshoot)**
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
+
+<a id="plugins"></a>
 
 ## 插件扩展
 
@@ -471,7 +550,11 @@ npm install -g @qingchencloud/openclaw-updater
 
 访问 [插件市场](https://openclaw.qt.cool/) 获取更多插件。
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="community"></a>
 
 ## 社区交流
 
@@ -480,26 +563,36 @@ npm install -g @qingchencloud/openclaw-updater
   &nbsp;&nbsp;
   <a href="https://yb.tencent.com/gp/i/LsvIw7mdR7Lb"><img src="https://img.shields.io/badge/元宝派-加入圈子-FF6A00?style=for-the-badge&logo=tencent-qq&logoColor=white" alt="元宝派"></a>
   &nbsp;&nbsp;
-  <a href="https://qm.qq.com/q/qUfdR0jJVS"><img src="https://img.shields.io/badge/QQ群-244979483-12B7F5?style=for-the-badge&logo=tencent-qq&logoColor=white" alt="QQ群"></a>
+  <a href="https://qt.cool/c/OpenClaw"><img src="https://img.shields.io/badge/QQ群-加入交流-12B7F5?style=for-the-badge&logo=tencent-qq&logoColor=white" alt="QQ群"></a>
+  &nbsp;&nbsp;
+  <a href="https://qt.cool/c/OpenClawWx"><img src="https://img.shields.io/badge/微信群-加入交流-07C160?style=for-the-badge&logo=wechat&logoColor=white" alt="微信群"></a>
 </p>
 
-### QQ 交流群（2000 人大群）
+### QQ 交流群
 
 <p align="center">
-  <img src="docs/image/qq_01.jpg" alt="QQ交流群" width="200px">
+  <a href="https://qt.cool/c/OpenClaw">
+    <img src="docs/image/OpenClaw-QQ.png" alt="QQ交流群" width="200px">
+  </a>
   <br>
-  <em>QQ 群号：244979483 | 扫码加入，交流 OpenClaw 使用心得</em>
+  <em>扫码或 <a href="https://qt.cool/c/OpenClaw">点击链接</a> 加入 | 2000 人大群，满员自动切换</em>
 </p>
 
 ### 微信交流群
 
 <p align="center">
-  <img src="docs/image/wx_07.png" alt="微信交流7群" width="200px">
+  <a href="https://qt.cool/c/OpenClawWx">
+    <img src="docs/image/OpenClawWx.png" alt="微信交流群" width="200px">
+  </a>
   <br>
-  <em>扫码加入7群 | 碰到问题也可以直接在群内反馈</em>
+  <em>扫码或 <a href="https://qt.cool/c/OpenClawWx">点击链接</a> 加入 | 碰到问题也可以直接在群内反馈</em>
 </p>
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="links"></a>
 
 ## 相关链接
 
@@ -511,13 +604,21 @@ npm install -g @qingchencloud/openclaw-updater
 | [GitHub Pages](https://1186258278.github.io/OpenClawChineseTranslation/) | [Discord 社区](https://discord.gg/U9AttmsNHh) |
 | [📱 ClawApp 手机端](https://github.com/qingchencloud/clawapp) | [ClawApp 产品官网](https://clawapp.qt.cool/) |
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="contributing"></a>
 
 ## 参与贡献
 
 - [报告问题](https://github.com/1186258278/OpenClawChineseTranslation/issues) | [改进翻译](docs/CONTRIBUTING.md) | [翻译规范](docs/TRANSLATION_GUIDE.md) | 给项目点个 Star
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="about"></a>
 
 ## 关于
 
@@ -525,5 +626,6 @@ npm install -g @qingchencloud/openclaw-updater
 
 © 武汉晴辰天下网络科技有限公司 | [鄂ICP备2025164966号](https://beian.miit.gov.cn/)
 
+<p align="right"><a href="#top">回到顶部</a></p>
 
 <!-- AI Translation Tools: Claude, Copilot, Codex, Devin, Amazon Q, CodeRabbit -->

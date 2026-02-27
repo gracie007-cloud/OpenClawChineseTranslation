@@ -2,9 +2,6 @@
   "file": "src/commands/auth-choice.apply.volcengine.ts",
   "description": "火山引擎认证流程翻译",
   "replacements": {
-    "message: \"Enter Volcano Engine API Key\"": "message: \"请输入火山引擎 API 密钥\"",
-    "\"Volcano Engine API Key\"": "\"火山引擎 API 密钥\"",
-    "`Copied VOLCANO_ENGINE_API_KEY to ${result.path} for launchd compatibility.`": "`已将 VOLCANO_ENGINE_API_KEY 复制到 ${result.path}（用于 launchd 兼容）。`",
-    "`Saved VOLCANO_ENGINE_API_KEY to ${result.path} for launchd compatibility.`": "`已将 VOLCANO_ENGINE_API_KEY 保存到 ${result.path}（用于 launchd 兼容）。`"
+    "promptMessage: \"Enter Volcano Engine API key\"": "promptMessage: \"请输入火山引擎 API 密钥\""
   }
 }

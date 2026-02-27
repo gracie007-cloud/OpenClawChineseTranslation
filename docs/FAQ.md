@@ -1,24 +1,37 @@
+<a id="top"></a>
+
 # 常见问题排查手册
 
-遇到问题？按错误消息搜索本页，或按场景分类查找解决方案。
+<p align="center">
+  <a href="../README.md">首页</a> ·
+  <a href="INSTALL_GUIDE.md">安装指南</a> ·
+  <a href="DOCKER_GUIDE.md">Docker 部署</a> ·
+  <b>常见问题</b> ·
+  <a href="CONTRIBUTING.md">贡献指南</a> ·
+  <a href="TRANSLATION_GUIDE.md">翻译规范</a>
+</p>
 
-> 返回 [README](../README.md) | [Docker 部署指南](DOCKER_GUIDE.md)
+遇到问题？按错误消息搜索本页，或按场景分类查找解决方案。
 
 ---
 
 ## 目录
 
-- [零、紧急修复](#零紧急修复) ⚠️
-- [一、安装问题](#一安装问题)
-- [二、启动问题](#二启动问题)
-- [三、Dashboard 连不上](#三dashboard-连不上)
-- [四、内网 / 远程访问](#四内网--远程访问)
-- [五、模型和对话](#五模型和对话)
-- [六、其他问题](#六其他问题)
+- [零、紧急修复](#emergency)
+- [一、安装问题](#install-issues)
+- [二、启动问题](#startup-issues)
+- [三、Dashboard 连不上](#dashboard-issues)
+- [四、内网 / 远程访问](#network-issues)
+- [五、模型和对话](#model-issues)
+- [六、其他问题](#other-issues)
 
 ---
 
+<a id="install-issues"></a>
+
 ## 一、安装问题
+
+<a id="install-slow"></a>
 
 ### 安装卡住不动 / 下载很慢
 
@@ -40,6 +53,8 @@ npm install -g @qingchencloud/openclaw-zh@latest
 如果是 Docker 镜像拉取慢，参考 [Docker 部署指南](DOCKER_GUIDE.md) 中的镜像加速方案。
 
 ---
+
+<a id="control-ui-not-found"></a>
 
 ### `Control UI assets not found`
 
@@ -71,6 +86,8 @@ openclaw --version
 
 ---
 
+<a id="permission-denied"></a>
+
 ### 安装报错 `Permission denied (publickey)` / `git error code 128`
 
 **你会看到**：
@@ -98,6 +115,8 @@ npm install -g @qingchencloud/openclaw-zh@latest
 
 ---
 
+<a id="heap-oom"></a>
+
 ### 启动时提示 "JavaScript heap out of memory"
 
 **你会看到**：
@@ -123,6 +142,8 @@ environment:
 > 服务器建议至少 4GB 内存
 
 ---
+
+<a id="module-not-found"></a>
 
 ### `MODULE_NOT_FOUND` / systemd 服务路径错误
 
@@ -163,6 +184,8 @@ systemctl --user restart openclaw-gateway
 
 ---
 
+<a id="still-english"></a>
+
 ### 安装后运行还是英文
 
 **你会看到**：运行 `openclaw --help` 或打开 Dashboard，界面仍然是英文。
@@ -182,9 +205,15 @@ npm install -g @qingchencloud/openclaw-zh@latest
 openclaw --version
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="startup-issues"></a>
+
 ## 二、启动问题
+
+<a id="missing-config"></a>
 
 ### `Missing config. Run openclaw setup`
 
@@ -219,6 +248,8 @@ docker restart openclaw
 
 ---
 
+<a id="gateway-mode-unset"></a>
+
 ### `gateway.mode is unset`
 
 **你会看到**：Doctor 诊断输出：
@@ -240,6 +271,8 @@ docker restart openclaw
 ```
 
 ---
+
+<a id="invalid-config"></a>
 
 ### `Invalid config` / `Unrecognized keys`
 
@@ -273,6 +306,8 @@ docker restart openclaw
 
 ---
 
+<a id="docker-restart-loop"></a>
+
 ### Docker 容器一直重启
 
 **你会看到**：`docker ps` 显示容器状态为 `Restarting`，或 `docker logs` 反复输出错误。
@@ -303,6 +338,8 @@ docker run -d --name openclaw -p 18789:18789 \
 
 ---
 
+<a id="gateway-not-running"></a>
+
 ### `Gateway not running` / 网关未运行
 
 **你会看到**：运行 `openclaw doctor` 提示"网关未运行"，或 Dashboard 无法访问。
@@ -322,7 +359,11 @@ openclaw onboard --install-daemon
 docker restart openclaw
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="dashboard-issues"></a>
 
 ## 三、Dashboard 连不上
 
@@ -344,6 +385,8 @@ flowchart TD
 ```
 
 ---
+
+<a id="token-mismatch"></a>
 
 ### `gateway token mismatch` / `unauthorized`
 
@@ -377,6 +420,8 @@ openclaw config get gateway.auth.token
 
 ---
 
+<a id="pairing-required"></a>
+
 ### `pairing required` / 设备配对
 
 **你会看到**：Dashboard 显示：
@@ -403,6 +448,8 @@ openclaw devices approve 693d5641-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 > 注意：清除浏览器缓存、换浏览器、用无痕模式都会生成新的设备 ID，需要重新批准。
 
 ---
+
+<a id="https-required"></a>
 
 ### `control ui requires HTTPS or localhost`
 
@@ -437,6 +484,8 @@ ssh -L 18789:127.0.0.1:18789 user@服务器IP
 
 ---
 
+<a id="proxy-headers"></a>
+
 ### `Proxy headers detected from untrusted address`
 
 **你会看到**：使用 Nginx 反向代理后，Dashboard 报此错误。
@@ -459,6 +508,8 @@ docker restart openclaw
 
 ---
 
+<a id="no-token-configured"></a>
+
 ### `Gateway auth is set to token, but no token is configured`
 
 **你会看到**：启动日志中出现此警告。
@@ -479,9 +530,15 @@ docker restart openclaw
 export OPENCLAW_GATEWAY_TOKEN=你的密码
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="network-issues"></a>
+
 ## 四、内网 / 远程访问
+
+<a id="lan-access"></a>
 
 ### npm 安装后，内网其他电脑无法访问
 
@@ -521,6 +578,8 @@ netsh advfirewall firewall add rule name="OpenClaw" dir=in action=allow protocol
 
 ---
 
+<a id="docker-remote-access"></a>
+
 ### Docker 远程部署后访问不了
 
 **你会看到**：Docker 容器启动成功，但从其他机器访问 `http://服务器IP:18789` 没反应。
@@ -543,6 +602,8 @@ docker restart openclaw
 
 ---
 
+<a id="docker-https"></a>
+
 ### Docker 远程访问是否必须用 HTTPS？
 
 **不是必须的。** 设置 Token 认证就可以通过 HTTP 远程访问。
@@ -556,9 +617,15 @@ docker restart openclaw
 
 只有在不设 Token 的情况下，浏览器才会因为安全策略（Web Crypto API 需要 HTTPS）阻止连接。
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="model-issues"></a>
+
 ## 五、模型和对话
+
+<a id="ollama-no-response"></a>
 
 ### 本地 Ollama 模型调用无响应
 
@@ -597,6 +664,8 @@ openclaw config set auth.openai.apiKey ollama
 
 ---
 
+<a id="custom-openai"></a>
+
 ### 如何使用自定义的 OpenAI 兼容接口
 
 **适用于**：OneAPI、New API、各种中转站、国产模型 API 等。
@@ -616,6 +685,8 @@ openclaw config set auth.openai.apiKey sk-your-api-key
 
 ---
 
+<a id="chat-language"></a>
+
 ### 对话语言是中文吗？
 
 对话语言取决于你使用的 AI 模型，**与本汉化项目无关**。
@@ -624,9 +695,15 @@ openclaw config set auth.openai.apiKey sk-your-api-key
 - 你可以在系统提示中设置"请用中文回复"
 - 本项目只汉化界面（CLI + Dashboard），不影响对话内容
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="other-issues"></a>
+
 ## 六、其他问题
+
+<a id="icon-missing"></a>
 
 ### 左上角图标不显示
 
@@ -640,6 +717,8 @@ npm update -g @qingchencloud/openclaw-zh
 ```
 
 ---
+
+<a id="how-to-update"></a>
 
 ### 如何更新到最新版
 
@@ -659,6 +738,8 @@ docker run -d --name openclaw -p 18789:18789 \
 
 ---
 
+<a id="switch-to-original"></a>
+
 ### 如何切换回原版
 
 ```bash
@@ -667,6 +748,8 @@ npm install -g openclaw
 ```
 
 ---
+
+<a id="full-uninstall"></a>
 
 ### 如何彻底卸载
 
@@ -688,6 +771,8 @@ rm -rf ~/.openclaw   # 删除配置（可选）
 
 ---
 
+<a id="docker-permission"></a>
+
 ### Docker 权限问题 `EACCES: permission denied`
 
 **你会看到**：容器启动或操作时报文件权限错误。
@@ -708,6 +793,8 @@ sudo chown -R 1000:1000 /你的目录路径
 
 ---
 
+<a id="docker-pull-denied"></a>
+
 ### Docker 拉取镜像报 `denied` 或 `unauthorized`
 
 ```bash
@@ -717,6 +804,8 @@ docker pull ghcr.io/1186258278/openclaw-zh:latest
 ```
 
 ---
+
+<a id="nas-deploy"></a>
 
 ### 飞牛 NAS / 群晖等设备如何部署
 
@@ -728,6 +817,8 @@ docker pull ghcr.io/1186258278/openclaw-zh:latest
 3. 进入容器终端执行 `openclaw setup` 初始化
 4. 设置 `openclaw config set gateway.mode local`
 5. 重启容器
+
+<p align="right"><a href="#top">回到顶部</a></p>
 
 ---
 

@@ -1,4 +1,30 @@
+<a id="top"></a>
+
 # 翻译规范
+
+<p align="center">
+  <a href="../README.md">首页</a> ·
+  <a href="INSTALL_GUIDE.md">安装指南</a> ·
+  <a href="DOCKER_GUIDE.md">Docker 部署</a> ·
+  <a href="FAQ.md">常见问题</a> ·
+  <a href="CONTRIBUTING.md">贡献指南</a> ·
+  <b>翻译规范</b>
+</p>
+
+---
+
+<a id="toc"></a>
+
+## 目录
+
+- [术语表](#glossary)
+- [翻译原则](#principles)
+- [风格指南](#style-guide)
+- [常见问题](#faq)
+
+---
+
+<a id="glossary"></a>
 
 ## 术语表
 
@@ -18,7 +44,15 @@
 | Config | 配置 |
 | Sandbox | 沙箱 |
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
+---
+
+<a id="principles"></a>
+
 ## 翻译原则
+
+<a id="keep-placeholders"></a>
 
 ### 1. 保持变量占位符
 
@@ -30,6 +64,8 @@
 "`Gateway port: ${port}`": "`网关端口: ${端口}`"
 ```
 
+<a id="keep-structure"></a>
+
 ### 2. 保持代码结构
 
 ```json
@@ -40,6 +76,8 @@
 "label: \"Use existing values\"": "标签：\"使用现有值\""
 ```
 
+<a id="quote-types"></a>
+
 ### 3. 注意引号类型
 
 源码中可能有不同类型的引号：
@@ -47,6 +85,8 @@
 - 弯引号: `"` `'` `'`
 
 翻译配置中要精确匹配原文的引号类型。
+
+<a id="keep-terms"></a>
 
 ### 4. 保持技术术语
 
@@ -58,7 +98,15 @@
 "run `openclaw doctor`": "运行 `开爪医生`"
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
+---
+
+<a id="style-guide"></a>
+
 ## 风格指南
+
+<a id="punctuation"></a>
 
 ### 标点符号
 
@@ -66,18 +114,30 @@
 - 冒号使用中文冒号（：）
 - 括号可用英文或中文，保持一致
 
+<a id="tone"></a>
+
 ### 语气
 
 - 保持友好但专业
 - 适当保留原文的幽默感
 - 错误提示要清晰明确
 
+<a id="length"></a>
+
 ### 长度
 
 - 尽量保持与原文相近的长度
 - UI 文本尤其注意不要过长
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
+---
+
+<a id="faq"></a>
+
 ## 常见问题
+
+<a id="q-string-not-found"></a>
 
 ### Q: 找不到要翻译的字符串？
 
@@ -86,9 +146,13 @@ A: 可能是因为：
 2. 引号类型不匹配
 3. 字符串被拆分在多行
 
+<a id="q-validation-failed"></a>
+
 ### Q: 翻译后验证失败？
 
 A: 检查：
 1. JSON 格式是否正确
 2. 转义字符是否正确（`\"` 表示引号）
 3. 原文是否精确匹配源码
+
+<p align="right"><a href="#top">回到顶部</a></p>

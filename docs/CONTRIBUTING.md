@@ -1,22 +1,37 @@
+<a id="top"></a>
+
 # 贡献指南
+
+<p align="center">
+  <a href="../README.md">首页</a> ·
+  <a href="INSTALL_GUIDE.md">安装指南</a> ·
+  <a href="DOCKER_GUIDE.md">Docker 部署</a> ·
+  <a href="FAQ.md">常见问题</a> ·
+  <b>贡献指南</b> ·
+  <a href="TRANSLATION_GUIDE.md">翻译规范</a>
+</p>
 
 感谢你对 **OpenClaw 汉化发行版** 的关注！
 
-> 返回 [README](../README.md)
-
 ---
+
+<a id="toc"></a>
 
 ## 目录
 
-- [环境准备](#环境准备)
-- [项目结构](#项目结构)
-- [汉化 CLI 工具](#汉化-cli-工具)
-- [手动汉化安装](#手动汉化安装)
-- [添加新翻译](#添加新翻译)
-- [翻译规范](#翻译规范)
-- [提交 PR](#提交-pr)
+- [环境准备](#setup)
+- [项目结构](#structure)
+- [汉化 CLI 工具](#cli-tool)
+- [手动汉化安装](#manual-install)
+- [添加新翻译](#add-translation)
+- [翻译规范](#translation-rules)
+- [提交 PR](#submit-pr)
+- [行为准则](#code-of-conduct)
+- [联系我们](#contact)
 
 ---
+
+<a id="setup"></a>
 
 ## 环境准备
 
@@ -29,7 +44,11 @@ cd OpenClawChineseTranslation
 git clone https://github.com/openclaw/openclaw.git openclaw
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="structure"></a>
 
 ## 项目结构
 
@@ -82,7 +101,11 @@ OpenClawChineseTranslation/
 └── docker-deploy.ps1       # Docker 一键部署 (Windows)
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="cli-tool"></a>
 
 ## 汉化 CLI 工具
 
@@ -96,7 +119,11 @@ OpenClawChineseTranslation/
 | `npm run cli -- verify` | 验证汉化结果 |
 | `npm run cli -- restore` | 恢复原版（使用 git checkout） |
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="manual-install"></a>
 
 ## 手动汉化安装
 
@@ -132,13 +159,21 @@ openclaw --version
 openclaw --help
 ```
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
 
+<a id="add-translation"></a>
+
 ## 添加新翻译
+
+<a id="find-target"></a>
 
 ### 1. 找到目标文件
 
 确定需要翻译的源文件位置（在 `openclaw/` 目录中）。
+
+<a id="create-rule"></a>
 
 ### 2. 创建翻译规则
 
@@ -160,9 +195,13 @@ openclaw --help
 - `description`: 此翻译配置的说明
 - `replacements`: 键值对，键为原始英文，值为翻译后的中文
 
+<a id="register-file"></a>
+
 ### 3. 注册翻译文件
 
 在 `translations/config.json` 中添加新文件的路径。
+
+<a id="test"></a>
 
 ### 4. 测试
 
@@ -177,6 +216,8 @@ npm run cli -- apply
 npm run cli -- verify
 ```
 
+<a id="custom-notes"></a>
+
 ### 5. 自定义翻译注意事项
 
 - 替换键必须在源文件中**唯一匹配**，否则可能导致误替换
@@ -184,11 +225,17 @@ npm run cli -- verify
 - Lit HTML 属性绑定（如 `?disabled=${...}`）不能被翻译
 - 较长的匹配串比短的更安全（避免过于通用的词如 `"default"`）
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="translation-rules"></a>
 
 ## 翻译规范
 
 详见 [TRANSLATION_GUIDE.md](TRANSLATION_GUIDE.md)
+
+<a id="core-principles"></a>
 
 ### 核心原则
 
@@ -197,6 +244,8 @@ npm run cli -- verify
 3. **保持格式** - 不改变占位符、换行、空格
 4. **简洁准确** - 避免冗长，符合中文习惯
 5. **先长后短** - 较长的匹配串应排在较短的前面，避免部分匹配
+
+<a id="terminology"></a>
 
 ### 常用术语对照
 
@@ -213,7 +262,11 @@ npm run cli -- verify
 | Node | 节点 |
 | Instance | 实例 |
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="submit-pr"></a>
 
 ## 提交 PR
 
@@ -224,7 +277,11 @@ npm run cli -- verify
 5. 提交更改
 6. 创建 Pull Request
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="code-of-conduct"></a>
 
 ## 行为准则
 
@@ -232,7 +289,11 @@ npm run cli -- verify
 - 接受建设性批评
 - 专注于改进项目
 
+<p align="right"><a href="#top">回到顶部</a></p>
+
 ---
+
+<a id="contact"></a>
 
 ## 联系我们
 
@@ -241,3 +302,5 @@ npm run cli -- verify
 - 公司官网: https://qingchencloud.com/
 
 感谢你的贡献！
+
+<p align="right"><a href="#top">回到顶部</a></p>

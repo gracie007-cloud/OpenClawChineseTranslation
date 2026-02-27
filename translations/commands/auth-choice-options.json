@@ -39,7 +39,7 @@
     "hint: \"Uses GitHub device flow\"": "hint: \"使用 GitHub 设备流程\"",
     "label: \"Google Gemini API key\"": "label: \"Google Gemini API 密钥\"",
     "label: \"Google Gemini CLI OAuth\"": "label: \"Google Gemini CLI OAuth\"",
-    "hint: \"Uses the bundled Gemini CLI auth plugin\"": "hint: \"使用内置 Gemini CLI 认证插件\"",
+    "hint: \"Unofficial flow; review account-risk warning before use\"": "hint: \"非官方流程；使用前请查看账户风险警告\"",
     "label: \"Xiaomi API key\"": "label: \"小米 API 密钥\"",
     "label: \"MiniMax OAuth\"": "label: \"MiniMax OAuth\"",
     "hint: \"Oauth plugin for MiniMax\"": "hint: \"MiniMax 的 OAuth 插件\"",
