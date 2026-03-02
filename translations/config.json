@@ -111,8 +111,7 @@
       "dashboard/config-form-shared.json",
       "dashboard/agents.json",
       "dashboard/usage.json",
-      "dashboard/skills-shared.json",
-      "dashboard/chat-fallback.json"
+      "dashboard/skills-shared.json"
     ],
     "extensions": [
       "extensions/feishu.json",

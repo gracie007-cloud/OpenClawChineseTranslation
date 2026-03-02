@@ -6,14 +6,16 @@
     "\"⚙️ Usage: /activation mention|always\"": "\"⚙️ 用法：/activation mention|always\"",
     "\"⚙️ Usage: /send on|off|inherit\"": "\"⚙️ 用法：/send on|off|inherit\"",
     "\"⚙️ Usage: /usage off|tokens|full|cost\"": "\"⚙️ 用法：/usage off|tokens|full|cost\"",
-    "\"⚠️ /session ttl is currently available for Discord thread-bound sessions.\"": "\"⚠️ /session ttl 目前仅适用于 Discord 线程绑定会话。\"",
-    "\"⚠️ /session ttl must be run inside a focused Discord thread.\"": "\"⚠️ /session ttl 必须在已聚焦的 Discord 线程中运行。\"",
+    "\"⚠️ /session idle and /session max-age are currently available for Discord thread-bound sessions.\"": "\"⚠️ /session idle 和 /session max-age 目前仅适用于 Discord 线程绑定会话。\"",
+    "\"⚠️ /session idle and /session max-age must be run inside a focused Discord thread.\"": "\"⚠️ /session idle 和 /session max-age 必须在已聚焦的 Discord 线程中运行。\"",
     "\"⚠️ Discord thread bindings are unavailable for this account.\"": "\"⚠️ 此账户的 Discord 线程绑定不可用。\"",
     "\"ℹ️ This thread is not currently focused.\"": "\"ℹ️ 此线程当前未聚焦。\"",
-    "\"ℹ️ Session TTL is currently disabled for this focused session.\"": "\"ℹ️ 此聚焦会话的 TTL 当前已禁用。\"",
-    "\"⚠️ Failed to update session TTL for the current binding.\"": "\"⚠️ 更新当前绑定的会话 TTL 失败。\"",
+    "\"ℹ️ Idle timeout is currently disabled for this focused session.\"": "\"ℹ️ 此聚焦会话的空闲超时当前已禁用。\"",
+    "\"ℹ️ Max age is currently disabled for this focused session.\"": "\"ℹ️ 此聚焦会话的最大存活时间当前已禁用。\"",
+    "\"⚠️ Failed to update idle timeout for the current binding.\"": "\"⚠️ 更新当前绑定的空闲超时失败。\"",
+    "\"⚠️ Failed to update max age for the current binding.\"": "\"⚠️ 更新当前绑定的最大存活时间失败。\"",
     "\"⚠️ /restart is disabled (commands.restart=false).\"": "\"⚠️ /restart 已禁用（commands.restart=false）。\"",
     "\"⚙️ Restarting OpenClaw in-process (SIGUSR1); back in a few seconds.\"": "\"⚙️ 正在进程内重启 OpenClaw（SIGUSR1），几秒后恢复。\"",
-    "\"Usage: /session ttl <duration|off> (example: /session ttl 24h)\"": "\"用法：/session ttl <时长|off>（示例：/session ttl 24h）\""
+    "\"Usage: /session idle <duration|off> | /session max-age <duration|off> (example: /session idle 24h)\"": "\"用法：/session idle <时长|off> | /session max-age <时长|off>（示例：/session idle 24h）\""
   }
 }
