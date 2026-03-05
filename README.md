@@ -16,6 +16,9 @@
 
 <a id="toc"></a>
 
+> 🦀 **[ClawPanel](https://github.com/qingchencloud/clawpanel)** — 内置 AI 助手的可视化管理面板 | 📱 **[ClawApp](https://github.com/qingchencloud/clawapp)** — 手机端聊天客户端 | [查看生态工具 →](#ecosystem)
+
+
 ## 目录
 
 [什么是 OpenClaw？](#what-is-openclaw) ·
@@ -64,6 +67,64 @@
 **胜算云** - 国内 AI API 聚合平台，新用户注册送额度，充值尊享 7 折优惠！
 
 [注册账号 →](https://www.shengsuanyun.com/?from=CH_4BVI0BM2)
+
+<p align="right"><a href="#top">回到顶部</a></p>
+
+---
+
+<a id="ecosystem"></a>
+
+## 🔥 生态工具
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🦀 <a href="https://github.com/qingchencloud/clawpanel">ClawPanel</a></h3>
+      <p><strong>内置 AI 助手</strong>的 OpenClaw 可视化管理面板</p>
+      <ul>
+        <li>🤖 AI 助手 — 8 大工具 + 4 种模式，自动诊断配置</li>
+        <li>🖼️ 图片识别 — 粘贴截图，AI 一眼看懂</li>
+        <li>⚡ 一键安装 — 自动检测环境，无需终端</li>
+        <li>🎛️ 可视化管理 — 模型、Gateway、Agent</li>
+      </ul>
+      <p>
+        <a href="https://github.com/qingchencloud/clawpanel/releases/latest"><img src="https://img.shields.io/github/v/release/qingchencloud/clawpanel?style=flat-square&color=6366f1&label=latest" alt="Release"></a>
+        <a href="https://claw.qt.cool/"><img src="https://img.shields.io/badge/site-claw.qt.cool-8b5cf6?style=flat-square" alt="Site"></a>
+      </p>
+      <details>
+        <summary>📸 预览截图（点击展开）</summary>
+        <br>
+        <img src="https://raw.githubusercontent.com/qingchencloud/clawpanel/main/docs/ai-assistant-demo.gif" width="100%" alt="ClawPanel AI Demo">
+        <br><br>
+        <img src="https://raw.githubusercontent.com/qingchencloud/clawpanel/main/docs/00.png" width="100%" alt="ClawPanel AI">
+        <br><br>
+        <img src="https://raw.githubusercontent.com/qingchencloud/clawpanel/main/docs/13.png" width="100%" alt="ClawPanel Vision">
+        <br><br>
+        <img src="https://raw.githubusercontent.com/qingchencloud/clawpanel/main/docs/01.png" width="100%" alt="ClawPanel Dashboard">
+      </details>
+    </td>
+    <td width="50%">
+      <h3>📱 <a href="https://github.com/qingchencloud/clawapp">ClawApp</a></h3>
+      <p>用手机浏览器和 OpenClaw AI 智能体聊天</p>
+      <ul>
+        <li>💬 流式聊天 — WebSocket 实时对话</li>
+        <li>📷 图片收发 — 拍照上传，AI 图片回复</li>
+        <li>🔧 工具调用 — 实时状态显示</li>
+        <li>📱 PWA + APK — 添加到主屏幕</li>
+      </ul>
+      <p>
+        <a href="https://github.com/qingchencloud/clawapp/releases/latest"><img src="https://img.shields.io/github/v/release/qingchencloud/clawapp?style=flat-square&color=10b981&label=latest" alt="Release"></a>
+        <a href="https://clawapp.qt.cool/"><img src="https://img.shields.io/badge/site-clawapp.qt.cool-10b981?style=flat-square" alt="Site"></a>
+      </p>
+      <details>
+        <summary>📸 预览截图（点击展开）</summary>
+        <br>
+        <img src="https://raw.githubusercontent.com/qingchencloud/clawapp/main/docs/image/chat-response.png" width="280" alt="ClawApp Chat">
+        <img src="https://raw.githubusercontent.com/qingchencloud/clawapp/main/docs/image/login-page.png" width="280" alt="ClawApp Login">
+      </details>
+    </td>
+  </tr>
+</table>
 
 <p align="right"><a href="#top">回到顶部</a></p>
 
