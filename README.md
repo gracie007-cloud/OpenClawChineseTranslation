@@ -63,13 +63,7 @@
 
 **胜算云** - 国内 AI API 聚合平台，新用户注册送额度，充值尊享 7 折优惠！
 
-| 阶梯 | 春节消耗 | 奖励 |
-|------|---------|------|
-| 尝鲜礼 | ≥50元 | 5元 模力券 |
-| 极客礼 | ≥100元 | 10元 模力券 + Kimi K2.5 七折卡(7天) |
-| 大神礼 | ≥500元 | 50元 模力券 + Kimi K2.5 七折卡(7天) |
-
-[查看活动 →](https://www.shengsuanyun.com/activity/4184b48a6be4443cbe13e86e091e43b4?from=CH_4BVI0BM2) · [注册账号 →](https://www.shengsuanyun.com/?from=CH_4BVI0BM2)
+[注册账号 →](https://www.shengsuanyun.com/?from=CH_4BVI0BM2)
 
 <p align="right"><a href="#top">回到顶部</a></p>
 
