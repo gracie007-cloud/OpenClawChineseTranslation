@@ -860,9 +860,9 @@
         /* 社区 */
         .community-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 16px;
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -982,7 +982,16 @@
             .features-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
+
+        /* 免费AI接口区域 */
+        .free-ai-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
         @media (max-width: 768px) {
+            .free-ai-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
             .nav-links.open {
                 display: flex;
@@ -1007,7 +1016,9 @@
             .hamburger { display: flex; }
             .hero { padding: 120px 0 50px; }
             .hero-buttons { flex-direction: column; align-items: center; }
-            .btn { width: 100%; max-width: 280px; justify-content: center; }
+            .btn { width: 100%; max-width: 320px; justify-content: center; }
+            .clawpanel-btn-wrap { width: 100%; max-width: 320px; }
+            .clawpanel-btn-wrap .btn { max-width: 100%; }
             .steps-grid { grid-template-columns: repeat(2, 1fr); }
             .docs-grid { grid-template-columns: 1fr; }
             .cmd-grid { grid-template-columns: 1fr; }
@@ -1587,6 +1598,7 @@
                 <span class="logo-text">OpenClaw CN</span>
             </a>
             <div class="nav-links" id="navLinks">
+                <a href="#free-ai" style="color:#10b981;font-weight:600">🎁 免费AI接口</a>
                 <a href="#quickstart">快速入门</a>
                 <a href="#install">安装</a>
                 <a href="#docs">文档中心</a>
@@ -1683,6 +1695,57 @@
             <div class="marquee-item"><span>📦</span>npm</div>
         </div>
     </div>
+
+    <!-- 🎁 免费 AI 接口推广 -->
+    <section class="section" id="free-ai" style="background: linear-gradient(180deg, transparent, rgba(16,183,129,0.04), transparent);">
+        <div class="container">
+            <h2 class="section-title">🎁 免费 AI 接口</h2>
+            <p class="section-desc">零成本接入主流 AI 模型 — 内部公益平台，无限 Token 流量，超级省钱！</p>
+
+            <div class="install-card" style="max-width: 900px; margin: 0 auto; border-color: rgba(16,183,129,0.2);">
+                <div class="free-ai-grid">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+                            <span style="font-size: 2rem;">🚀</span>
+                            <h3 style="font-size: 1.2rem;">gpt.qt.cool</h3>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: #10b981; font-size: 1.2rem;">✓</span>
+                                <span><strong>无限 Token 流量</strong> — 不限调用次数，真正零成本</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: #10b981; font-size: 1.2rem;">✓</span>
+                                <span><strong>主流模型全覆盖</strong> — GPT-5.4、Claude、Gemini、DeepSeek</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: #10b981; font-size: 1.2rem;">✓</span>
+                                <span><strong>即开即用</strong> — 兼容 OpenAI 接口，无缝对接 OpenClaw</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <span style="color: #10b981; font-size: 1.2rem;">✓</span>
+                                <span><strong>安全稳定</strong> — 内部公益项目，长期维护</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="margin-bottom: 12px;">
+                            <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; margin: 12px 0;">
+                                <p style="font-size: 0.9rem; margin-bottom: 8px;"><strong>使用方法：</strong></p>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">1. 在 <a href="https://gpt.qt.cool/" target="_blank" style="color: var(--primary);">gpt.qt.cool</a> 获取 API Key</p>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">2. OpenClaw 初始化时选择 <strong>OpenAI Compatible</strong></p>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">3. 填入地址和 Key 即可使用</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 12px; margin-top: 16px;">
+                            <a href="https://gpt.qt.cool/" target="_blank" class="btn btn-primary" style="flex: 1; justify-content: center;">🎁 立即使用</a>
+                        </div>
+                        <p style="text-align: center; margin-top: 10px; color: var(--text-muted); font-size: 0.82rem;">💡 搭配 OpenClaw = 免费私人 AI 助手</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- 快速入门 4 步 -->
     <section class="section" id="quickstart">
@@ -2056,6 +2119,11 @@
                     <h3>微信群</h3>
                     <p>扫码加入，问题随时反馈</p>
                 </a>
+                <a href="https://qt.cool/c/OpenClawDY" target="_blank" class="community-card">
+                    <div class="community-icon">🎵</div>
+                    <h3>抖音交流群</h3>
+                    <p>关注抖音，加入社群交流</p>
+                </a>
                 <a href="https://discord.gg/U9AttmsNHh" target="_blank" class="community-card">
                     <div class="community-icon">🎮</div>
                     <h3>Discord</h3>
@@ -2077,6 +2145,13 @@
                     </a>
                     <p>微信交流群</p>
                     <a href="https://qt.cool/c/OpenClawWx" target="_blank">点击链接加入</a>
+                </div>
+                <div class="qr-item">
+                    <a href="https://qt.cool/c/OpenClawDY" target="_blank">
+                        <img src="https://qt.cool/c/OpenClawDY/qr.png" alt="抖音群二维码">
+                    </a>
+                    <p>抖音交流群</p>
+                    <a href="https://qt.cool/c/OpenClawDY" target="_blank">点击链接加入</a>
                 </div>
             </div>
         </div>

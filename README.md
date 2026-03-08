@@ -22,6 +22,7 @@
 ## 目录
 
 [什么是 OpenClaw？](#what-is-openclaw) ·
+[🎁 免费AI接口](#free-ai) ·
 [4 步上手](#quickstart) ·
 [汉化效果预览](#preview) ·
 [常用命令](#commands) ·
@@ -60,9 +61,34 @@
 
 ---
 
+<a id="free-ai"></a>
+
+## 🎁 免费 AI 接口
+
+> **零成本接入主流 AI 模型！** 我们内部搭建的公益平台，无限 Token 流量，超级省钱！
+
+<p align="center">
+  <a href="https://gpt.qt.cool/"><img src="https://img.shields.io/badge/🚀_免费AI接口-gpt.qt.cool-10b981?style=for-the-badge" alt="免费AI接口"></a>
+</p>
+
+**平台亮点：**
+
+- **🆓 无限 Token 流量** — 不限调用次数，不限 Token 用量，真正零成本
+- **🤖 主流模型全覆盖** — GPT-5.4、Claude、Gemini、DeepSeek 等热门模型开箱即用
+- **⚡ 即开即用** — 注册即可获取 API Key，兼容 OpenAI 接口格式，无缝对接 OpenClaw
+- **🔒 安全稳定** — 内部公益项目，长期维护，稳定可靠
+
+**配合 OpenClaw 使用：**
+
+在 [gpt.qt.cool](https://gpt.qt.cool/) 获取 API Key 后，初始化 OpenClaw 时选择 **OpenAI Compatible** 提供商，填入地址和 Key 即可。支持 GPT-5.4、Claude、Gemini、DeepSeek 等主流模型。
+
+> 💡 **省钱小贴士**：搭配 OpenClaw 使用，相当于拥有了一个免费的私人 AI 助手，日常聊天、写代码、处理文档全部零成本！
+
+[立即使用 →](https://gpt.qt.cool/)
+
 <a id="partners"></a>
 
-## 合作伙伴
+### 合作伙伴
 
 **胜算云** - 国内 AI API 聚合平台，新用户注册送额度，充值尊享 7 折优惠！
 
@@ -621,6 +647,8 @@ npm install -g @qingchencloud/openclaw-updater
   <a href="https://qt.cool/c/OpenClaw"><img src="https://img.shields.io/badge/QQ群-加入交流-12B7F5?style=for-the-badge&logo=tencent-qq&logoColor=white" alt="QQ群"></a>
   &nbsp;&nbsp;
   <a href="https://qt.cool/c/OpenClawWx"><img src="https://img.shields.io/badge/微信群-加入交流-07C160?style=for-the-badge&logo=wechat&logoColor=white" alt="微信群"></a>
+  &nbsp;&nbsp;
+  <a href="https://qt.cool/c/OpenClawDY"><img src="https://img.shields.io/badge/抖音群-加入交流-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt="抖音群"></a>
 </p>
 
 ### QQ 交流群
@@ -641,6 +669,16 @@ npm install -g @qingchencloud/openclaw-updater
   </a>
   <br>
   <em>扫码或 <a href="https://qt.cool/c/OpenClawWx">点击链接</a> 加入 | 碰到问题也可以直接在群内反馈</em>
+</p>
+
+### 抖音交流群
+
+<p align="center">
+  <a href="https://qt.cool/c/OpenClawDY">
+    <img src="https://qt.cool/c/OpenClawDY/qr.png" alt="抖音交流群" width="200px">
+  </a>
+  <br>
+  <em>扫码或 <a href="https://qt.cool/c/OpenClawDY">点击链接</a> 加入 | 拍视频、看教程、交流心得</em>
 </p>
 
 <p align="right"><a href="#top">回到顶部</a></p>
