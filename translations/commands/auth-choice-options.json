@@ -53,7 +53,7 @@
     "label: \"MiniMax M2.5 (CN)\"": "label: \"MiniMax M2.5（国内版）\"",
     "hint: \"China endpoint (api.minimaxi.com)\"": "hint: \"国内端点 (api.minimaxi.com)\"",
     "label: \"MiniMax M2.5 Highspeed\"": "label: \"MiniMax M2.5 Highspeed\"",
-    "hint: \"Official fast tier (legacy: Lightning)\"": "hint: \"官方快速层级（旧称：Lightning）\"",
+    "hint: \"Official fast tier\"": "hint: \"官方快速层级\"",
     "label: \"Coding-Plan-CN\"": "label: \"编程计划-国内版\"",
     "label: \"Coding-Plan-Global\"": "label: \"编程计划-国际版\"",
     "hint: \"GLM Coding Plan CN (open.bigmodel.cn)\"": "hint: \"GLM 编程计划国内版 (open.bigmodel.cn)\"",
