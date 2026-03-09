@@ -4,7 +4,7 @@
   "replacements": {
     "<div class=\"card-title\">Tool Access</div>": "<div class=\"card-title\">工具访问</div>",
     "Profile + per-tool overrides for this agent.": "此代理的配置文件 + 单工具覆盖。",
-    "enabled.": "已启用。",
+    "</span> enabled.": "</span> 已启用。",
     "Enable All": "全部启用",
     "Disable All": "全部禁用",
     "Reload Config": "重载配置",

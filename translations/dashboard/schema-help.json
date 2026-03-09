@@ -94,7 +94,7 @@
     "\"tools.web\":\n    \"Web-tool policy grouping for search/fetch providers, limits, and fallback behavior tuning. Keep enabled settings aligned with API key availability and outbound networking policy.\"": "\"tools.web\":\n    \"网页工具配置，包括搜索和获取设置。\"",
     "\"tools.web.search.enabled\": \"Enable the web_search tool (requires a provider API key).\"": "\"tools.web.search.enabled\": \"启用网页搜索功能。\"",
     "\"tools.web.search.apiKey\": \"Brave Search API key (fallback: BRAVE_API_KEY env var).\"": "\"tools.web.search.apiKey\": \"网页搜索 API 密钥。\"",
-    "\"tools.web.search.maxResults\": \"Default number of results to return (1-10).\"": "\"tools.web.search.maxResults\": \"搜索返回的最大结果数。\"",
+    "\"tools.web.search.maxResults\": \"Number of results to return (1-10).\"": "\"tools.web.search.maxResults\": \"搜索返回的最大结果数。\"",
     "session:\n    \"Global session routing, reset, delivery policy, and maintenance controls for conversation history behavior. Keep defaults unless you need stricter isolation, retention, or delivery constraints.\"": "session:\n    \"会话管理配置，控制超时、标签和生命周期。\"",
     "cron: \"Global scheduler settings for stored cron jobs, run concurrency, delivery fallback, and run-session retention. Keep defaults unless you are scaling job volume or integrating external webhook receivers.\"": "cron: \"定时任务配置。\"",
     "\"cron.enabled\":\n    \"Enables cron job execution for stored schedules managed by the gateway. Keep enabled for normal reminder/automation flows, and disable only to pause all cron execution without deleting jobs.\"": "\"cron.enabled\":\n    \"启用定时任务功能。\"",
