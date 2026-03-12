@@ -124,7 +124,9 @@
       "dashboard/overview.json",
       "dashboard/gateway-url-confirmation.json",
       "dashboard/markdown-sidebar.json",
-      "dashboard/usage-metrics.json"
+      "dashboard/usage-metrics.json",
+      "dashboard/agents-utils.json",
+      "dashboard/channels-nostr-profile.json"
     ],
     "extensions": [
       "extensions/feishu.json",
