@@ -1786,16 +1786,36 @@
     <section class="section" id="install" style="background: linear-gradient(180deg, transparent, rgba(220,38,38,0.03), transparent);">
         <div class="container">
             <h2 class="section-title">安装方式</h2>
-            <p class="section-desc">三种方式任选，脚本安装最省心</p>
+            <p class="section-desc">四种方式任选，独立安装包最省心</p>
 
             <div class="install-tabs">
-                <button class="tab-btn active" onclick="switchTab('script')">脚本安装</button>
+                <button class="tab-btn active" onclick="switchTab('standalone')">独立安装包</button>
+                <button class="tab-btn" onclick="switchTab('script')">脚本安装</button>
                 <button class="tab-btn" onclick="switchTab('npm')">npm 安装</button>
                 <button class="tab-btn" onclick="switchTab('docker')">Docker 部署</button>
             </div>
 
             <div class="install-card">
-                <div class="install-method active" id="method-script">
+                <div class="install-method active" id="method-standalone">
+                    <div style="text-align:center;margin-bottom:16px">
+                        <span style="display:inline-block;background:linear-gradient(135deg,#dc2626,#f59e0b);color:#fff;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:600">⭐ 推荐·零依赖</span>
+                    </div>
+                    <p style="text-align:center;color:var(--text-muted);margin-bottom:16px;font-size:0.9rem;line-height:1.6">自带 Node.js 运行时，无需安装任何依赖，下载解压即可使用。支持 Windows / macOS / Linux / 树莓派。</p>
+                    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px">
+                        <a href="https://github.com/qingchencloud/openclaw-standalone/releases/latest" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:10px 24px;background:var(--primary);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem">下载独立安装包</a>
+                        <a href="https://github.com/qingchencloud/openclaw-standalone" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:10px 24px;border:1px solid var(--border);color:var(--text);border-radius:8px;text-decoration:none;font-size:0.9rem">GitHub 项目</a>
+                    </div>
+                    <div class="code-label">macOS / Linux / 树莓派 一键安装</div>
+                    <div class="code-block">
+                        <code>curl -fsSL https://dl.qrj.ai/openclaw/install.sh | bash</code>
+                        <button class="copy-btn" onclick="copyCode(this)">复制</button>
+                    </div>
+                    <p style="text-align:center;color:var(--text-muted);margin-top:14px;font-size:0.82rem">
+                        Windows 用户请下载 .exe 安装向导，双击即装。其他平台请下载对应压缩包解压即用。
+                    </p>
+                </div>
+
+                <div class="install-method" id="method-script">
                     <div class="code-label">Windows PowerShell</div>
                     <div class="code-block">
                         <code>Invoke-WebRequest -Uri "https://cdn.jsdelivr.net/gh/1186258278/OpenClawChineseTranslation@main/install.ps1" -OutFile "install.ps1"; .\install.ps1</code>
