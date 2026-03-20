@@ -166,6 +166,16 @@
 
 ### 第 1 步：安装
 
+**方式一：独立安装包（推荐，零依赖，无需 Node.js/npm）**
+
+- **Windows**: 下载 [.exe 安装向导](https://github.com/qingchencloud/openclaw-standalone/releases/latest)，双击即装
+- **macOS / Linux / 树莓派**: curl -fsSL https://dl.qrj.ai/openclaw/install.sh | bash
+- **全平台下载**: [GitHub Releases](https://github.com/qingchencloud/openclaw-standalone/releases/latest)
+
+> 独立安装包自带 Node.js 运行时，下载解压即可使用，无需任何环境依赖。
+
+**方式二：npm 安装（需要 Node.js 22+）**
+
 ```bash
 npm install -g @qingchencloud/openclaw-zh@latest
 ```
@@ -649,6 +659,8 @@ npm install -g @qingchencloud/openclaw-updater
   <a href="https://qt.cool/c/OpenClawWx"><img src="https://img.shields.io/badge/微信群-加入交流-07C160?style=for-the-badge&logo=wechat&logoColor=white" alt="微信群"></a>
   &nbsp;&nbsp;
   <a href="https://qt.cool/c/OpenClawDY"><img src="https://img.shields.io/badge/抖音群-加入交流-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt="抖音群"></a>
+  &nbsp;&nbsp;
+  <a href="https://qt.cool/c/feishu"><img src="https://img.shields.io/badge/飞书群-加入交流-3370FF?style=for-the-badge&logo=lark&logoColor=white" alt="飞书群"></a>
 </p>
 
 ### QQ 交流群
@@ -679,6 +691,16 @@ npm install -g @qingchencloud/openclaw-updater
   </a>
   <br>
   <em>扫码或 <a href="https://qt.cool/c/OpenClawDY">点击链接</a> 加入 | 拍视频、看教程、交流心得</em>
+</p>
+
+### 飞书交流群
+
+<p align="center">
+  <a href="https://qt.cool/c/feishu">
+    <img src="https://qt.cool/c/feishu/qr.png" alt="飞书交流群" width="200px">
+  </a>
+  <br>
+  <em>扫码或 <a href="https://qt.cool/c/feishu">点击链接</a> 加入 | 飞书群聊，高效协作交流</em>
 </p>
 
 <p align="right"><a href="#top">回到顶部</a></p>
