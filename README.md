@@ -166,16 +166,6 @@
 
 ### 第 1 步：安装
 
-**方式一：独立安装包（推荐，零依赖，无需 Node.js/npm）**
-
-- **Windows**: 下载 [.exe 安装向导](https://github.com/qingchencloud/openclaw-standalone/releases/latest)，双击即装
-- **macOS / Linux / 树莓派**: curl -fsSL https://dl.qrj.ai/openclaw/install.sh | bash
-- **全平台下载**: [GitHub Releases](https://github.com/qingchencloud/openclaw-standalone/releases/latest)
-
-> 独立安装包自带 Node.js 运行时，下载解压即可使用，无需任何环境依赖。
-
-**方式二：npm 安装（需要 Node.js 22+）**
-
 ```bash
 npm install -g @qingchencloud/openclaw-zh@latest
 ```
