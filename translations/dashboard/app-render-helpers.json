@@ -4,7 +4,6 @@
   "replacements": {
     "title=\"Chat settings\"": "title=\"聊天设置\"",
     "aria-label=\"Chat settings\"": "aria-label=\"聊天设置\"",
-    "\"Default model\"": "\"默认模型\"",
     "aria-label=\"Chat model\"": "aria-label=\"聊天模型\"",
     "fallbackName: \"Main Session\"": "fallbackName: \"主会话\"",
     "prefix: \"Subagent:\", fallbackName: \"Subagent:\"": "prefix: \"子代理:\", fallbackName: \"子代理:\"",
