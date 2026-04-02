@@ -18,4 +18,4 @@
     "description:\n          \"Interactive configuration for credentials, channels, gateway, and agent defaults\"": "description:\n          \"交互式配置凭证、渠道、网关和代理默认设置\"",
     "description:\n          \"Non-interactive config helpers (get/set/unset/file/validate). Default: starts guided setup.\"": "description:\n          \"非交互式配置工具（get/set/unset/file/validate）。默认：启动引导式设置。\""
   }
-}\n
+}
