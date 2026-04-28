@@ -16,6 +16,22 @@
     "Your configuration is invalid. Some settings may not work as expected.": "您的配置无效。某些设置可能无法按预期工作。",
     "? \"Hide env values\" : \"Reveal env values\"": "? \"隐藏环境值\" : \"显示环境值\"",
     ">\n                        Peek\n                      </button>": ">\n                        查看\n                      </button>",
-    "{ id: \"other\", label: \"Other\"": "{ id: \"other\", label: \"其他\""
+    "{ id: \"other\", label: \"Other\"": "{ id: \"other\", label: \"其他\"",
+    "id: \"custom\",\n      label: \"Custom\"": "id: \"custom\",\n      label: \"自定义\"",
+    "? \"Replace custom theme\"": "? \"替换自定义主题\"",
+    "title=${props.configPath ? `Open ${props.configPath}` : \"Open config file\"}": "title=${props.configPath ? `打开 ${props.configPath}` : \"打开配置文件\"}",
+    "<h3 class=\"settings-appearance__heading\">Push Notifications</h3>": "<h3 class=\"settings-appearance__heading\">推送通知</h3>",
+    "Subscribe to receive browser push notifications from your gateway.": "订阅以接收来自您的网关的浏览器推送通知。",
+    "<span class=\"settings-info-row__label\">Browser support</span>": "<span class=\"settings-info-row__label\">浏览器支持</span>",
+    ">${push.supported ? \"Available\" : \"Not supported\"}</span": ">${push.supported ? \"可用\" : \"不支持\"}</span",
+    "<span class=\"settings-info-row__label\">Permission</span>": "<span class=\"settings-info-row__label\">权限</span>",
+    "<span class=\"settings-info-row__label\">Status</span>": "<span class=\"settings-info-row__label\">状态</span>",
+    "${push.subscribed ? \"Subscribed\" : \"Not subscribed\"}": "${push.subscribed ? \"已订阅\" : \"未订阅\"}",
+    "      ? \"Granted\"\n      : push.permission === \"denied\"\n        ? \"Denied\"\n        : push.permission === \"default\"\n          ? \"Not requested\"\n          : \"Unsupported\";": "      ? \"已授予\"\n      : push.permission === \"denied\"\n        ? \"已拒绝\"\n        : push.permission === \"default\"\n          ? \"未请求\"\n          : \"不支持\";",
+    "                        Unsubscribe\n                      </button>": "                        取消订阅\n                      </button>",
+    "                        Send test\n                      </button>": "                        发送测试\n                      </button>",
+    "${push.loading ? \"Subscribing...\" : \"Enable notifications\"}": "${push.loading ? \"订阅中...\" : \"启用通知\"}",
+    "                  Notifications are blocked. Update your browser site permissions to allow\n                  notifications.": "                  通知已被阻止。请更新浏览器站点权限以允许\n                  通知。",
+    "? \"Reveal sensitive values\"\n                                    : \"Hide sensitive values\"}": "? \"显示敏感值\"\n                                    : \"隐藏敏感值\"}"
   }
 }

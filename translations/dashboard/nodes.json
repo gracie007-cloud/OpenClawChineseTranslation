@@ -20,7 +20,6 @@
     "<div class=\"muted\">No nodes with system.run available.</div>": "<div class=\"muted\">没有可用的 system.run 节点。</div>",
     "<div class=\"muted\">No agents found.</div>": "<div class=\"muted\">未找到代理。</div>",
     "Use default": "使用默认",
-    "Remove": "移除",
     "<span>Binding</span>": "<span>绑定</span>",
     "default agent": "默认代理",
     "agent": "代理"

@@ -16,6 +16,9 @@
     "description: \"Set thinking level.\"": "description: \"设置思考级别。\"",
     "description: \"Toggle verbose mode.\"": "description: \"切换详细模式。\"",
     "description: \"Toggle fast mode.\"": "description: \"切换快速模式。\"",
-    "description: \"Show or set the model.\"": "description: \"显示或设置模型。\""
+    "description: \"Show or set the model.\"": "description: \"显示或设置模型。\"",
+    "description: \"Export a JSONL trajectory bundle for the active session.\"": "description: \"为当前会话导出 JSONL 轨迹包。\"",
+    "description: \"Output directory (default: workspace)\"": "description: \"输出目录（默认：工作区）\"",
+    "description: \"List model providers/models.\"": "description: \"列出模型提供商/模型。\""
   }
 }

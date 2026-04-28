@@ -15,6 +15,14 @@
     "Disable ANSI colors": "禁用 ANSI 颜色",
     "`Global log level override for file + console (${CLI_LOG_LEVEL_VALUES})`": "`全局日志级别覆盖，适用于文件和控制台 (${CLI_LOG_LEVEL_VALUES})`",
     "return `\\n${theme.heading(\"Examples:\")}\\n${fmtExamples}\\n\\n${theme.muted(\"Docs:\")} ${docs}\\n`;": "return `\\n${theme.heading(\"示例：\")}\\n${fmtExamples}\\n\\n${theme.muted(\"文档：\")} ${docs}\\n${theme.muted(\"汉化版：\")} ${theme.info(\"https://openclaw.qt.cool/\")}\\n`;",
-    "\"Show detailed help for the models command.\"": "\"显示 models 命令的详细帮助。\""
+    "\"Show detailed help for the models command.\"": "\"显示 models 命令的详细帮助。\"",
+    "\"Run the CLI inside a running Podman/Docker container named <name> (default: env OPENCLAW_CONTAINER)\"": "\"在正在运行的 Podman/Docker 容器 <name> 内运行 CLI（默认：环境变量 OPENCLAW_CONTAINER）\"",
+    "\"Hint: commands suffixed with * have subcommands. Run <command> --help for details.\"": "\"提示：带 * 后缀的命令有子命令。运行 <command> --help 查看详情。\"",
+    "program.helpOption(\"-h, --help\", \"Display help for command\")": "program.helpOption(\"-h, --help\", \"显示命令帮助\")",
+    "program.helpCommand(\"help [command]\", \"Display help for command\")": "program.helpCommand(\"help [command]\", \"显示命令帮助\")",
+    ".replace(/^Usage:/gm, theme.heading(\"Usage:\"))": ".replace(/^Usage:/gm, theme.heading(\"用法：\"))",
+    ".replace(/^Options:/gm, theme.heading(\"Options:\"))": ".replace(/^Options:/gm, theme.heading(\"选项：\"))",
+    ".replace(/^Commands:/gm, theme.heading(\"Commands:\"));": ".replace(/^Commands:/gm, theme.heading(\"命令：\"));",
+    ".version(ctx.programVersion)": ".version(ctx.programVersion, \"-V, --version\", \"输出版本号\")"
   }
 }

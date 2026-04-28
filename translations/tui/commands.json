@@ -21,6 +21,7 @@
     "\"Reset the session\"": "\"重置会话\"",
     "\"Open settings\"": "\"打开设置\"",
     "\"Exit the TUI\"": "\"退出 TUI\"",
+    "description: \"Run provider auth/login flow\"": "description: \"运行提供商认证/登录流程\"",
     "\"Slash commands:\"": "\"斜杠命令列表：\""
   }
 }

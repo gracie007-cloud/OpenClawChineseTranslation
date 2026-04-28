@@ -6,6 +6,6 @@
 
     "  const webFetchTool = createWebFetchTool({\n    config: options?.config,\n    sandboxed: options?.sandboxed,\n    runtimeWebFetch: runtimeWebTools?.fetch,\n  });": "  const webFetchTool = createWebFetchTool({\n    config: options?.config,\n    sandboxed: options?.sandboxed,\n    runtimeWebFetch: runtimeWebTools?.fetch,\n  });\n  const hasShengSuanYunProvider = Boolean(options?.config?.models?.providers?.shengsuanyun);\n  const shengsuanyunGenerateTools = hasShengSuanYunProvider\n    ? createGenerateTools({ config: options?.config })\n    : [];",
 
-    "    ...(imageTool ? [imageTool] : []),": "    ...(imageTool ? [imageTool] : []),\n    ...shengsuanyunGenerateTools,"
+    "    ...collectPresentOpenClawTools([webSearchTool, webFetchTool, imageTool, pdfTool]),": "    ...collectPresentOpenClawTools([webSearchTool, webFetchTool, imageTool, pdfTool]),\n    ...shengsuanyunGenerateTools,"
   }
 }

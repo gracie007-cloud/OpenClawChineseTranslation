@@ -1,5 +1,5 @@
 {
-  "file": "src/cli/program/register.subclis.ts",
+  "file": "src/cli/program/subcli-descriptors.ts",
   "description": "CLI 子命令列表说明",
   "replacements": {
     "Run, inspect, and query the WebSocket Gateway": "运行、检查和查询 WebSocket 网关",
@@ -17,7 +17,7 @@
     "Webhook helpers and integrations": "Webhook 工具与集成",
     "Legacy clawbot command aliases": "旧版 clawbot 命令别名",
     "Secure DM pairing (approve inbound requests)": "安全私信配对（审批入站请求）",
-    "Manage OpenClaw plugins and extensions": "管理 OpenClaw 插件和扩展",
+    "Manage OpenClaw plugins": "管理 OpenClaw 插件",
     "Manage connected chat channels (Telegram, Discord, etc.)": "管理已连接的聊天渠道（Telegram、Discord 等）",
     "Lookup contact and group IDs (self, peers, groups) for supported chat channels": "查询支持渠道的联系人和群组 ID",
     "Security tools and local config audits": "安全工具和本地配置审计",
